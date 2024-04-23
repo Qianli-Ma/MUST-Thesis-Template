@@ -1,15 +1,15 @@
 \usepackage[colorlinks]{hyperref}
 \definecolor{bluecite}{HTML}{000000}
-\newcommand{\@sethypcolor}[1]{
+% \newcommand{\@sethypcolor}[1]{
     \hypersetup{
         breaklinks  =   true,
-        urlcolor    =   #1,
-        linkcolor   =   #1,
-        citecolor   =   #1,
-        anchorcolor =   #1,
+        urlcolor    =   black,
+        linkcolor   =   black,
+        citecolor   =   black,
+        anchorcolor =   black,
     }
-}
-\def\sethypcolor{\@sethypcolor{Blue4}}
+% }
+\def\sethypcolor{\@sethypcolor{bluecite}}
 
 
 
@@ -23,20 +23,12 @@
 
 
 % 文献引用格式
+% \bibpunct{[开括号]}{[闭括号]}{[引用之间的分隔符]}{[作者和年份之间的分隔符]}{[注释和年份之间的分隔符]}{[后注]}
 \RequirePackage{natbib}
 \ifwriteqEn
-    \setcitestyle{round, square,aysep={,}, yysep={,}, notesep={,},citesep ={;}}
-    \bibpunct{(}{)}{;}{a}{,}{...}
+    \bibpunct{(}{)}{;}{,}{,}{a}
 \else
-    \setcitestyle{
-        round, 
-        square,
-        aysep={，}, 
-        yysep={-}, 
-        notesep={，},
-        citesep ={;}
-    }
-    \bibpunct{(}{)}{；}{a}{，}{;}
+    \bibpunct{(}{)}{；}{,}{,}{a}
 \fi
 
 

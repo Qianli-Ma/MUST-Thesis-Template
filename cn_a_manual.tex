@@ -1,8 +1,8 @@
 % !TeX encoding = UTF-8
-% @Yongjian.Li 澳門科技大學-畢業論文 LaTeX template-2023.12.01
+% @Yongjian.Li 澳門科技大學-畢業論文 LaTeX template-2024.04.21
 % 使用手冊: https://iihciyekub.github.io/must-thesis-manual
 
-% 选择加载项
+% 選擇加載項
 \documentclass[writingLanguage=chinese,
     addPageTitle=on,
     addDeclaration=on,
@@ -15,7 +15,7 @@
    
 % 論文基本信息,必填不能刪除
 \def\shool              {Macau University of Science and Technology}
-\def\cnTitle            {我的毕业论文中文题目}
+\def\cnTitle            {我的畢業論文中文題目}
 \def\cnShortTitle       {\cnTitle}% 頁眉顯示的中文論文短題目
 \def\enTitle            {English title of my graduation thesis}
 \def\enShortTitle       {\enTitle}% 頁眉顯示的英文論文短題目
@@ -29,131 +29,137 @@
 \def\DateofDeclaration	{2023/11/20}% 設置論文原創聲明時間
 \def\DateofSignature	{2023/11/30}% 設置簽署論文原創聲明的時間
 \def\PublicAfterYears   {5}% 設置論文幾年後公開
-\def\mySign             {Fig/mySign.png}%支持带透明通道的png照片(推荐)
-\def\supervisorSign     {Fig/supervisorSign.png}%支持带透明通道的png照片
+\def\mySign             {Fig/mySign.png}%支持帶透明通道的png照片(推薦)
+\def\supervisorSign     {Fig/supervisorSign.png}%支持帶透明通道的png照片
 
 
 
 
 
 \begin{document}
+\begin{abstract@cn}{澳門科技大學研究生畢業論文模板}
+本模板基於\LaTeX{}文檔語言製作，嚴格符合澳門科技大學（以下簡稱“MUST”）的排版參考標準，涵蓋扉頁、原創性聲明、中英文摘要、目錄、圖表目錄、校徽水印、個人簡歷及參考文獻等內容。
 
-\begin{abstract@cn}{關鍵字1、關鍵字1、關鍵字1、關鍵字1、}
-本研究採用2009 年至2014 年首度上市的公司279 家為研究樣本，檢驗公司治理與財務績效之關聯性。利用樣本公司上市時的公司治理變數，檢驗公司治理對上市後的會計績效影響與上市後 30 天的市場報酬，再進而依據過去文獻對公司治理變數的論述，以單一指標衡量，依研究對象中位數區分公司治理程度，以及公司治理變數給予不同分數，驗證對財務績效之影響，並比較「有價證券上市審查準則」強化公司治理制度前後之上市公司，在公司治理與財務績效上是否有差異。透過相關分析、T 檢定、迴歸分析，檢驗三大研究假說，實證結果獲得以下主要結論： 
+\noindent 本排版設計嚴格遵守MUST的官方規範文件，包括：
 \begin{enumerate}[label=\arabic*).]
-\item 結論1
-\item 結論2 
+\item 研究生論文寫作指導（2022年10月修訂版）
+\item 碩士與博士論文參考文獻補充説明\_2022（商學院）
+\item 扉頁格式要求
+\item 學位論文原創性聲明要求
+\item 校徽水印規範
 \end{enumerate}
+請注意，除商學院外的其他學院可能需要補充或修改部分排版細節。所有模板文件均存於.def文件夾內，且已添加詳盡的中文註釋，用户可根據具體排版要求進行調整。如需技術支持，請訪問\faGithub：\url{https://github.com/iihciyekub/MUST-Thesis/issues} 提交問題以獲得進一步的幫助。
+
+\noindent 最後更新時間：\datea\today
+
 \end{abstract@cn}
 
-\begin{abstract@en}{keyword1、keyword1、keyword1、keyword1、}
-This research used 279 companies established between 2009 and 2014 as the
-sample, examining the relationship between corporate governance and financial
-performance. Corporate governance variable during the time when company
-gets started is used to examine the effect of corporate governance on accounting
-effectiveness after the company has been on the market, as well as the effect on
-the return rate during the first 30 days of the company’s opening. Further
-analysis from literature review on corporate governance, using single
-measurement, is according to the median of the level of corporate governance
-and the rating of corporate governance variable, to cross examine its effect on
-financial performance. Also, a comparison of the effect on strengthening
-corporate governance using “Stock Exchange Listing Standards” before and
-after the company was listed on the stock market on corporate governance and
-financial performance. Correlation, T-test, and Regression analysis were used to
-examine three hypotheses. Findings include:
-\begin{enumerate}[label=\roman*).]
-    \item Company characteristics
-High Tech industry has better corporate governance mechanism than traditional
-industries.
-  \item Characteristic of corporate governance level
-High corporate governance companies have better accounting effectiveness and
-market performance.
+\begin{abstract@en}{Macau University of Science and Technology Graduate Thesis Template}
+This template is created based on the \LaTeX{} documentation language and strictly complies with the typesetting standards provided by Macau University of Science and Technology (hereinafter referred to as 'MUST'), covering the title page, declaration of originality, abstracts in both Chinese and English, table of contents, list of figures, university emblem watermark, personal resume, and references.
+
+\noindent The typesetting design strictly follows MUST's official specification documents, including:
+\begin{enumerate}[label=\arabic*).]
+\item Graduate Thesis Writing Guide (Revised October 2022)
+\item Supplemental Instructions for References in Master's and Doctoral Theses 2022 (Business School)
+\item Title Page Format Requirements
+\item Degree Thesis Originality Declaration Requirements
+\item University Emblem Watermark Standards
 \end{enumerate}
+Please note that faculties other than the Business School may need to supplement or modify some typesetting details. All template files are stored in the .def folder, with extensive Chinese comments added, allowing users to adjust according to specific typesetting requirements. For technical support, please visit \faGithub: \url{https://github.com/iihciyekub/MUST-Thesis/issues} to submit issues for further assistance.
+
+\noindent Last updated: \datea\today
+
 \end{abstract@en}
 
 % 添加目錄 
 \addtableofcontents
 
+\chapter{模板設計開源}
+\noindent \faHandORight\; 推薦使用 overleaf 在線版本 (持續更新) 
+\begin{itemize}
+    \item \url{https://www.overleaf.com/read/mjzpcxztzqzv#3b0b73}
+\end{itemize}
+
+\noindent \faHandORight\;  GitHub 源文件 
+\begin{itemize}
+    \item \url{https://github.com/iihciyekub/MUST-Thesis}
+\end{itemize}
+
+\noindent \faHandORight\; overleaf texAide (chrome Extensions) 
+
+提供簡繁體轉換/澳科大參考文獻格式轉換/ \LaTeX{} 宏命令查詢 
+\begin{itemize}
+    \item \url{https://chromewebstore.google.com/detail/overleaf-texaide/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN}
+\end{itemize}
+
+\noindent \faHandORight\; 設計文檔更新歷史 
+\begin{itemize}
+    \item \url{https://github.com/iihciyekub/MUST-Thesis/blob/master/readme.md}
+\end{itemize}
+
+\noindent \faHandORight\; 在線幫助文檔 
+\begin{itemize}
+    \item \url{https://iihciyekub.github.io/must-thesis-manual/}
+\end{itemize}
+
+
+
 
 
 \chapter{論文排版説明}
-\section{格式參數}
+\section{論文排版基本要求}
 \subsection{排版要求規範文件}
 \begin{table}[H]
 \Large
 \centering
+\caption{MUST 校方排版要求規範文件,2024}
 \begin{tabularx}{\textwidth}{lX}
 \toprule
-序號 & 學校排版要求文件 (點擊查看) \\
+序 & 學校排版要求文件 (點擊查看) \\
 \midrule
-1& \faHandORight\; \href{https://www.must.edu.mo/images/GSO/files/sgsdocument/GS002.pdf}{研究生論文寫作指導(2019 年2 月修訂)}\\
+1& \faHandORight\; \href{https://www.must.edu.mo/images/GSO/files/sgsdocument/GS002.pdf}{研究生論文寫作指導 (2022年10月修訂)}\\
 2& \faHandORight\; \href{https://www.must.edu.mo/images/GSO/files/sgsdocument/GS004.pdf}{扉頁格式}\\
 3& \faHandORight\; \href{https://www.must.edu.mo/images/GSO/files/S023學位論文原創性聲明BI.pdf}{學位論文原創性聲明}\\
-4& \faHandORight\; \href{http://www.must.edu.mo/images/SGS/files/APA_7th_0710.pdf}{研究生論文格式參考資料(APA)}\\
-5& \faHandORight\; \href{https://lib.must.edu.mo/sites/default/files/must-logo.jpg}{校徽水印}\\
+4& \faHandORight\; \href{http://www.must.edu.mo/images/SGS/files/APA_7th_0710.pdf}{研究生論文格式參考資料 (APA)}\\
+5& \faHandORight\; \href{https://www.must.edu.mo/images/MSB/files/碩士與博士論文參考文獻格式補充説明_2022.pdf}{碩士與博士論文參考文獻格式補充説明\_2022 (商學院)}\\
+6& \faHandORight\; \href{https://lib.must.edu.mo/sites/default/files/must-logo.jpg}{校徽水印}\\
 \bottomrule
 \end{tabularx}
 \end{table}
+
 \subsection{版面設定}
-
-
-
-
-
 \begin{table}[H]
-    \caption{e}
+    \Large
     \centering
-    \csvautobooktabular{Tab/reftab.csv} 
+    \caption{讀取csv生成的表格}
+    \begin{tabular}{
+        >{\raggedright\arraybackslash}p{2.1cm}
+        >{\raggedright\arraybackslash}p{12cm}
+    }  % 第二列寬度調整為12cm
+    \toprule
+    % 表頭（根據你的CSV文件內容自定義）
+    域 & 尺寸 \\ \midrule
+    % 讀取CSV文件內容
+    \csvreader[head to column names]{Tab/reftab.csv}{}
+    { \csvcoli & \csvcolii \\ }\\[-1.5em]
+    \bottomrule
+    \end{tabular}
 \end{table}
 
+\subsection{論文排列順序}
+扉頁、中文摘要、英文摘要、目錄、緒論、論證章、結論和建議、參考文獻、附錄
+(圖表或文字資料) 、致謝、個人簡歷、及本人發表的論文和著作 (Publication)。
 
 
-
-
-
-
-
-
-
-\begin{itemize}
-    \item A4 紙張，29.7 cm * 21 cm;
-    \item 邊界為上(2.5cm)、下(2.5cm)、左(3.8cm)，右(2.5cm);
-\end{itemize}
-
-\ifthenelse{\equal{\Name}{模板}}{\addinfo}{}
-
-\chapter{緒論}
-\section{研究動機與目的}
-\txtHere{[1]}
-\citep{luey2013, turabian2015, WangZhenWu2004, WenZaoWai2009, QiuZiHeng2017, HeDingZhao2019, WuPeiHua2020, QiuJiongYou2014, QiuJiongYou2016, QiuJiongYou2019, LinDongTai2008, LinJing2018, LinWenYao2018, LinXHui2014, HongWenQi2019, HongZhenZhou2018, ChenYaNing9999, ChenXiaMin2019, ZhangYan2016, GuoJiaTu2019, WenDaMao2015, JianYiLing2019, abdoh2019, bordwell2013, bourdieu1990, Co2020, cohen2007, cole2013, deliot2014, foster2017, giles2019, harvey2007, johnson2018, macdonald2020, manguel2009, Milliot2020, paige2017, poff2019, šteger2010, TaiwanNews2019, Villazon2011, wipawin2018}
-
-\subsection{研究動機}
-美 國 學 者 對 公 司 治 理 的 討 論 可 追 溯 自 1930 年代， Berle \&
-Means(1932)指出，美國企業存在著股權分散的必要性，\textit{因為隨著企業}
-規模不斷的擴大，使得多數的中大型公司皆需將經營權與所有權加以
-分離來經營，以期達到專業化的目的。
-有系統地討論此一問題者為Jensen，在1988年Jensen首度有系統地
-收錄以公司治理為主題的文章(Weston, Siu \& Johnson; 2002)。亞洲金融
-風暴以降，企業美化財務報表、操縱盈餘管理及掏空資產事件層出不
-窮，強化公司治理機制遂成為各界關心與注重的現象。公司治理機制
-可謂制度面與市場面兩者間所形成的一種組合，被用來作為導引公司
-的決策者，在做決策時，能面面俱到地考量各個利害關係人之利益並
-且以公司價值之最大化為目標(Denis \& McConnell;2003)。
-「公司治理」（Corporate Governance），台灣學者譯法不一，基於
-監督、防弊觀念者有稱之為「公司管控」或「公司監理」，強調興利功
-能者則稱之為「公司管理」或「公司統理」；或許各種名詞所界定的意
-義與範圍不盡相同，但其主要的內涵均係使企業體透過法律的制衡管
-控與設計，在企業所有權與企業經營權分離的組織體系中，能有效監
-督組織活動，並且健全組織運作，以防止脱法行為之經營弊端出現，
-以實現企業社會責任的目標。
 
 
 
 
  
 
+\ifthenelse{\equal{\Name}{模板}}{\addinfo}{}
 
-
+\chapter{緒論}
 \section{數學分析相關概念}
 
 \begin{axiom}[皮亞諾公理 1]
@@ -364,10 +370,8 @@ maseeselect
 
 \begin{acknowpage}
 謝謝各位 
-
 省略
 \end{acknowpage}
-
 
 
 
@@ -384,20 +388,15 @@ maseeselect
 
 %增加學術文章
 \addpaperItem{ 
-    \item 中國澳門氹仔島澳門科技大學1中國澳門氹仔島澳門科技大學1中國澳門氹仔島澳門科技大學1中國澳門氹仔島澳門科技大學1中國澳門氹仔島澳門科技大學1中國澳門氹仔島澳門科技大學1中國澳門氹仔島澳門科技大學1中國澳門氹仔島澳門科技大學,
+    \item 中國澳門氹仔島澳門科技大學 
     \item 中國澳門氹仔島澳門科技大學,
 }
 
-
 % 增加項目
 \addprojectItem{
-    \item 无
+    \item 無
 }
 \end{addcvpage}
-
-
-
-
 
 
 \end{document}
