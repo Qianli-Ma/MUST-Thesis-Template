@@ -54,7 +54,7 @@ https://github.com/iihciyekub/MUST-Thesis/assets/30061185/f00ab6eb-6f1d-472f-8bc
 
 
 
-- 以下是學校提供的關於論文排版所有細節要求的附件(截止 2023-04-15 可訪問).
+- 以下是學校提供的關於論文排版所有細節要求的附件(截止 2024-04-21 可訪問).
 
 |  NO. | 文件名                                                       | 本項目參考或使用 | 嚴格      |
 | ---: | :----------------------------------------------------------- | ---------------- | ---- |
@@ -63,11 +63,11 @@ https://github.com/iihciyekub/MUST-Thesis/assets/30061185/f00ab6eb-6f1d-472f-8bc
 |    3 | [論文寫作指導](https://www.must.edu.mo/images/GSO/files/sgsdocument/GS002.pdf) | 參考             | ✓    |
 |    4 | [學位論文統一格式範例(Chinese)](https://www.must.edu.mo/images/GSO/files/sgsdocument/GS001.pdf) | 參考             | ✓    |
 |     | [學位論文統一格式範例(English)](https://www.must.edu.mo/images/GSO/files/sgsdocument/Thesis-sample-Eng.pdf) | 參考             | ✓    |
-|    5 | [研究生論文格式參考資料(APA)](http://www.must.edu.mo/images/SGS/files/APA_7th_0710.pdf) | 參考             | ✓    |
+|    5 | [研究生論文格式參考資料(APA)](http://www.must.edu.mo/images/SGS/files/APA_7th_0710.pdf) | 參考             | ✘     |
 |    6 | [校徽水印](https://lib.must.edu.mo/sites/default/files/must-logo.jpg) | 使用             | ✓    |
 |    7 | [國家文後參考文獻著錄規則](http://www.must.edu.mo/images/SGS/files/GBT7714_2015.pdf) | 無               | ✘    |
 |    8 | [MLA參考文獻格式](https://www.must.edu.mo/images/SGS/files/MLA參考文獻格式.pdf) | 無               | ✘    |
-
+|    9 | [碩士與博士論文參考文獻格式補充説明_2022](https://www.must.edu.mo/images/MSB/files/碩士與博士論文參考文獻格式補充説明_2022.pdf) | 參考             | ✓    |
 
 
 歷史版本:
