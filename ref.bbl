@@ -150,126 +150,174 @@
 \vspace{0.5cm}\bibitem[En, 2019]{en2019}{\fontsize{16 pt}{\baselineskip}\selectfont 英文部分：}
 {\enfz 
 
-%en:1/20
+%en:1/29
 \bibitem[{Abdoh}, 2019]{abdoh2019}
 \newblock Abdoh, E. (2019).
 \newblock {\em Implications of social networks on medication information-seeking among middle eastern international students: an exploratory study}[Unpublished doctoral dissertation].
 \newblock University of South Carolina.
 \newblock {\enfz  \url{https://scholarcommons.sc.edu/cgi/viewcontent.cgi?article=6546&context=etd}}.
 
-%en:2/20
+%en:2/29
 \bibitem[{Bordwell \& Thompson}, 2013]{bordwell2013}
 \newblock Bordwell, D., \& Thompson, K. (2013).
 \newblock {\em Film art: an introduction}(10th).
 \newblock McGraw-Hill Education.
 \newblock International Edition.
 
-%en:3/20
+%en:3/29
 \bibitem[{Bourdieu}, 1990]{bourdieu1990}
 \newblock Bourdieu, P. (1990).
 \newblock {\em Homo academicus}(P. Collier, Trans).
 \newblock Stanford University Press.
 \newblock Original work published 1968.
 
-%en:4/20
+%en:4/29
+\bibitem[{Brown, L., Camerer, \& Lovallo}, 2013]{Brown2013}
+\newblock Brown, A., L., E., Camerer, C. F., \& Lovallo, D. (2013).
+\newblock Estimating structural models of equilibrium and cognitive hierarchy thinking in the field: the case of withheld movie critic reviews.
+\newblock {\em Management Science},  59(3), 733--747.
+
+%en:5/29
+\bibitem[{Choi}, 2012]{Choi2012}
+\newblock Choi, S. (2012).
+\newblock A cognitive hierarchy model of learning in networks.
+\newblock {\em Review of Economic Design},  16(2-3), 215--250.
+
+%en:6/29
 \bibitem[{Cohen, Manion, \& Morrison}, 2007]{cohen2007}
 \newblock Cohen, L., Manion, L., \& Morrison, K. (2007).
 \newblock {\em Research methods in education}(6th ed).
 \newblock Routledge.
 
-%en:5/20
+%en:7/29
 \bibitem[{Cole, Han, Weathers, \& Joyner}, 2013]{cole2013}
 \newblock Cole, T. W., Han, M., Weathers, W. F., \& Joyner, E. (2013).
 \newblock Library marc records into linked open data: challenges and opportunities.
 \newblock {\em Journal of Library Metadata},  13(2-3), 163-196.
 \newblock {\enfz  \url{https://doi.org/10.1080/19386389.2013.826074}}.
 
-%en:6/20
+%en:8/29
 \bibitem[{Deliot}, 2014]{deliot2014}
 \newblock Deliot, C. (2014).
 \newblock Publishing the british national bibliography as linked open data.
 \newblock {\em Catalogue \& Index},  174, 13-18.
 \newblock {\enfz  \url{http://www.bl.uk/bibliographic/pdfs/publishing_bnb_as_lod.pdf}}.
 
-%en:7/20
+%en:9/29
+\bibitem[{Fisher}, 1930]{fisher1930}
+\newblock Fisher, I. (1930).
+\newblock {\em Theory of interest: as determined by impatience to spend income and opportunity to invest it}.
+\newblock Augustusm Kelly Publishers, Clifton.
+
+%en:10/29
 \bibitem[{Foster}, 2017]{foster2017}
 \newblock Foster, T. C. (2017).
 \newblock {\em How to read literature like a professor: A lively and entertaining guide to reading between the lines}(Rev. ed).
 \newblock HarperCollins Publishers.
 
-%en:8/20
+%en:11/29
 \bibitem[{Giles \& Meyers}, 2019]{giles2019}
 \newblock Giles, E., \& Meyers, J. (2019, June 20-25).
 \newblock {\em Beyond information: showing wider roles public libraries can play in the fight against HIV/AIDS in africa}[Poster presentation].
 \newblock The 2019 ALA annual conference, Washington, DC, United States.
 \newblock {\enfz  \url{https://www.eventscribe.com/2019/ALA-Annual/fsPopup.asp?Mode=posterinfo&PosterID=208955}}.
 
-%en:9/20
+%en:12/29
+\bibitem[{Goldfarb \& Yang}, 2009]{Goldfarb2009}
+\newblock Goldfarb, A., \& Yang, B. (2009).
+\newblock Are all managers created equal.
+\newblock {\em Journal of Marketing Research},  46(5), 612--622.
+
+%en:13/29
 \bibitem[{Harvey \& Goudvis}, 2007]{harvey2007}
 \newblock Harvey, S., \& Goudvis, A. (2007).
 \newblock {\em Strategies that work: teaching comprehension for understanding and engagement}(2nd ed).
 \newblock Stenhouse Publishers; Pembroke Publishers.
 
-%en:10/20
+%en:14/29
+\bibitem[{Hossain \& Morgan}, 2013]{Hossain2013}
+\newblock Hossain, T., \& Morgan, J. (2013).
+\newblock When do markets tip? A cognitive hierarchy approach.
+\newblock {\em Marketing Science},  32(3), 431--453.
+
+%en:15/29
+\bibitem[{Jevons}, 1879]{jevons1879}
+\newblock Jevons, W. S. (1879).
+\newblock {\em The theory of political economy}.
+\newblock Macmillan and Company.
+
+%en:16/29
 \bibitem[{Johnson, Watkinson, \& Mabe}, 2018]{johnson2018}
 \newblock Johnson, R., Watkinson, A., \& Mabe, M. (2018, October).
 \newblock {\em The STM report: an overview of scientific and scholarly publishing}(5th ed).
 \newblock International Association of Scientific, Technical and Medical Publishers.
 
-%en:11/20
+%en:17/29
 \bibitem[{Macdonald}, 2020]{macdonald2020}
 \newblock Macdonald, S. (2020, January 16).
 \newblock Ex-ibrox chief's huge library heads to home of golf.
 \newblock {\em The Times},  18.
 
-%en:12/20
+%en:18/29
 \bibitem[{Manguel}, 2009]{manguel2009}
 \newblock Manguel, A. (2009).
 \newblock {\em The library at night}.
 \newblock Yale University Press.
 
-%en:13/20
+%en:19/29
 \bibitem[{Milliot}, 2020]{Milliot2020}
 \newblock Milliot (2020, February 17).
 \newblock Publishers, printers meet to talk shop.
 \newblock {\em Publishers Weekly},  267(7), 10.
 
-%en:14/20
+%en:20/29
 \bibitem[{Organisation for Economic Co-Operation and Development}, 2020]{Co2020}
 \newblock Organisation for Economic Co-Operation and Development (2020).
 \newblock {\em Strengthening the governance of skills systems: lessons from six OECD countries}.
 \newblock OECD Publishing.
 \newblock {\enfz  \url{https://doi.org/10.1787/3a4bb6ea-en}}.
 
-%en:15/20
+%en:21/29
 \bibitem[{Paige}, 2017]{paige2017}
 \newblock Paige, B. E. (2017).
 \newblock {\em Open data portals in northern new england states}[Unpublished master’s thesis].
 \newblock University of British Columbia.
 \newblock {\enfz  \url{https://dor.org/10.14288/1.0355232}}.
 
-%en:16/20
+%en:22/29
 \bibitem[{Poff}, 2019]{poff2019}
 \newblock Poff, D. C. (2019, May 4-7).
 \newblock {\em Diversity/inclusion in research and publication ethics}[Conference presentation].
 \newblock 2019 CSE annual meeting, Columbus, OH, United States.
 \newblock {\enfz  \url{http://druwt19tzv6d76es3lg0qdo7-wpengine.netdna-ssl.com/wp-content/uploads/1.2DeborahPoff.pdf}}.
 
-%en:17/20
+%en:23/29
+\bibitem[{Rae}, 1905]{rae1905}
+\newblock Rae, J. (1905).
+\newblock {\em The sociological theory of capital: being a complete reprint of the new principles of political economy, 1834}.
+\newblock Macmillan.
+
+%en:24/29
+\bibitem[{Samuelson}, 1937]{Samuelson1937}
+\newblock Samuelson, P. A. (1937).
+\newblock A note on measurement of utility.
+\newblock {\em The Review of Economic Studies},  4(2), 155.
+
+%en:25/29
 \bibitem[{Šteger}, 2010]{šteger2010}
 \newblock Šteger, A. (2010).
 \newblock {\em The book of things}(B. Henry, Trans).
 \newblock BOA Editions.
 \newblock Original work published 2005.
 
-%en:18/20
+%en:26/29
 \bibitem[{Taiwan News}, 2019]{TaiwanNews2019}
 \newblock Taiwan News (2019, June 12).
 \newblock Publishers hold seminar on public lending rights.
 \newblock {\em Taiwan News}.
 \newblock {\enfz  \url{https://www.taiwannews.com.tw/en/news/3722431}}.
 
-%en:19/20
+%en:27/29
 \bibitem[{Villazon-Terrazas, Vilches-blazquez, Corcho, \& Gomez-Perez}, 2011]{Villazon2011}
 \newblock Villazon-Terrazas, Vilches-blazquez, L. M., Corcho, O., \& Gomez-Perez (2011).
 \newblock Methodological guidelines for publishing government linked data.
@@ -277,7 +325,13 @@
 \newblock Springer.
 \newblock {\enfz  \url{https://doi.org/10.1007/978-1-4614-1767-5_2  }}.
 
-%en:20/20
+%en:28/29
+\bibitem[{Von b{\"o}hm-bawerk}, 1922]{Bawerk1922}
+\newblock Von b{\"o}hm-bawerk, E. (1922).
+\newblock {\em Capital and interest: A critical history of economical theory}.
+\newblock Brentano.
+
+%en:29/29
 \bibitem[{Wipawin, Wongkaew, \& Sarawanawong}, 2018]{wipawin2018}
 \newblock Wipawin, N., Wongkaew, C., \& Sarawanawong, J. (2018, August 24-30).
 \newblock {\em Should OA journals be sealed?: case of journals in thai-journal citation index}.
@@ -286,6 +340,6 @@
 
 } 
 
-%total ref num:42. (zh:22, en:20) 
+%total ref num:51. (zh:22, en:29) 
 
 \end{thebibliography} 

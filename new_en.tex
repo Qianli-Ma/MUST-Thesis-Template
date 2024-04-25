@@ -1,32 +1,28 @@
 % !TeX encoding = UTF-8
-% @Yongjian.Li 澳門科技大學-畢業論文 LaTeX template-2023
+% !TeX program = xelatex
+\iffalse
+########################
+Project Name:
+    The LaTeX cn/en template for MUST Thesis 
+Github:
+    https://github.com/iihciyekub/MUST-Thesis
+User's Guide:
+    https://iihciyekub.github.io/must-thesis-manual
+Overleaf texAide (Chrome Extension):
+    https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN
 
-% User's Guide: 
-    % https://iihciyekub.github.io/must-thesis-manual
-    
-% Github : 
-    % https://github.com/iihciyekub/MUST-Thesis
-    
-% Overleaf project: 
-    % https://www.overleaf.com/read/mjzpcxztzqzv
-    
-% chrome 浏览器扩展程序 overleaf texAide 2.61.29, 下载地址:
-    % https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN
-    
-% bib2bbl online: 
-    % https://pychat.online/bib2bbl
+author: Yongjian.Li ian.Li  (LastUpdate: 2024-04-25)
+########################
+\fi
 
-% 最後更新: 2023-6-25
-
-\documentclass[
-    writingLanguage=english, 
-    addPageTitle=on,
-    addDeclaration=on,
-    addMUSTlog=off,
-    printMod=off,
-    refIndent=on,
-    addFigTOC=on,
-    addTabTOC=on,
+\documentclass[writingLanguage=english, % 中文模板
+    addPageTitle=on,  % on/off 添加扉頁
+    addDeclaration=on, % on/off 添加原創聲明
+    addMUSTlog=off, % on/off 添加校徽水印
+    addFigTOC=on, % on/off 添加圖目錄  
+    addTabTOC=on, % on/off 添加表目錄
+    refIndent=off, % on/off 修改參考文獻條目縮進
+    printMod=off, % on/off 設置奇偶數邊距對稱紙質打印模式
 ]{.def/must}
 
 
@@ -67,7 +63,7 @@
 
 
 \chapter{Introduction}
-\txtHere{1}
+\txtHere{1} \cite{abdoh2019}
 \section{Research Aim and Objectives}
 \section{fig}
 \captionsetup[figure]{singlelinecheck=off,justification=raggedright}
@@ -335,7 +331,7 @@ e^{\pi i}+1=0
 
 
 % 請確保bib 文件名稱為 ref.bib, 利用js文件處理後的bbl文件名稱為 ref.bbl
-\addreference
+\addreference{ref}
 
 \begin{appendix}
 

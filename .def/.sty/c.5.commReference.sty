@@ -1,4 +1,4 @@
-\newcommand{\addreference}{
+\newcommand{\addreference}[1]{
     \clearpage
     \ifwriteqEn
         \setenchapter{Reference List}
@@ -9,31 +9,24 @@
     \fi
     \addtolength{\itemsep}{4em}
     
-    \IfFileExists{ref.bbl}{%
-        \input{ref.bbl}
+    \IfFileExists{#1.bbl}{%
+        \input{#1.bbl}
     }{%
-        \IfFileExists{ref.bib}{
+        \IfFileExists{#1.bib}{
             \ifwriteqEn\else
             {\small\noindent \textcolor{magenta}{\Large\faWarning} 
-             \textcolor{Emerald}{\faMailReply} 如果看到這個提醒, 説明你的文獻排版並不符合澳科大要求,
-             通過以下操作:
+             \textcolor{Emerald}{\faMailReply}  
             \begin{itemize}
-            \item 本地轉換工具: 目錄 ".tool/bib2bbl.html" 下載後瀏覽打開使用;
-            \item 在線轉換工具,有效期至2024-03 地址: \textit{\url{http://pychat.online/bib2bbl}}
-            \item 如果你是在 overleaf 平台进行创作, 推荐安装 chrome 浏览器插件 (overleaf s2t/bib2bbl) 应用商店地址是: https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN
-            \end{itemize}
-             使用方法:
-            \begin{itemize}
-            \item 打開应用后,將 ref.bib 文件內容複製到左邊文本框, 右邊文本框會生成合要求的 bbl 文件,
-            \item 將轉換後 bbl 文件內容複製到本地目錄下的 ref.bbl 文件(注意文件名, 如果没有该文件,自行創建)
-            \item 重新編譯即完成
+            \item 如果看到這個提醒, 説明你的文獻排版並不符合澳科大参考文献格式要求。
+            \item 请通过下载安装 chrome 应用 overleaf texAide 进行格式转换，以解决此问题。
+            \item https://chromewebstore.google.com/detail/overleaf-texaide/icekiliecbhnockmfkehoebbkmhmapmo
             \end{itemize}
             }
             \fi
             \bibliographystyle{.def/.sty/apa5.bst}
-            \bibliography{ref.bib}
+            \bibliography{#1.bib}
         }{%
-            不存在 ref.bib 或 ref.bbl 文件.
+            不存在 #1.bib 或 #1.bbl 文件.
         }
     }
 }
