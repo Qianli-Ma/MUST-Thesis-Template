@@ -1,13 +1,21 @@
+
 (推薦) 直接獲取 **_overleaf_** 在線模板:
-**Join** [**_overleaf online project_**](https://www.overleaf.com/read/mjzpcxztzqzv#3b0b73)
+**Join** [**_overleaf online project_ (持續更新)**](https://www.overleaf.com/read/mjzpcxztzqzv#3b0b73)
 
-https://github.com/iihciyekub/MUST-Thesis/assets/30061185/f00ab6eb-6f1d-472f-8bc9-cdc4a1ca3e30
+**Q1:** 第一次使用,如何開始
 
-視屏演示如何通過安裝 chrome 瀏覽器擴展程序: [***overleaf texAide***](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN), 解決澳科大文獻排版的特殊格式問題。
+https://github.com/iihciyekub/MUST-Thesis/assets/30061185/18049f49-20f1-4e1d-8c25-cb7410ab5a2c
+
+**Q2:** 如何通過 chrome 應用 overleaf texAide 將 bib 參考文獻轉換為 MUST 指定格式的 bbl 文件?
+
+https://github.com/iihciyekub/MUST-Thesis/assets/30061185/d2c7fe3b-d14a-47a5-a71c-98ea1f6d925f
+
+
+---
 
 [must-thesis latex template ***User's Guide***](https://iihciyekub.github.io/must-thesis-manual/)
 
-[Chrome extensions: ***overleaf texAide***](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN)
+[Chrome extensions: ***overleaf texAide***](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo)
 
 #  a $\LaTeX$ template for MUST-Thesis
 
@@ -42,13 +50,10 @@ https://github.com/iihciyekub/MUST-Thesis/assets/30061185/f00ab6eb-6f1d-472f-8bc
 - 增加文檔類選項,詳細見([使用幫助文檔](https://iihciyekub.github.io/must-thesis-manual/))
 - 修正澳門科技大學校徽（嚴格使用學校提供的低分辨率校徽,未來期待美工加入,繪製一個嚴格一致的矢量圖）;
 - 解決其它一系列bug問題;
-- 提供自動工具 [s2t/bib2bbl](https://github.com/iihciyekub/must-thesis-tools/blob/master/bib2bbl.html), 供用户解決簡體轉繁體及澳門科技大學研究生畢業論文關於文獻 apa7 特殊排版格式要求問題;
 
 |            方法 | 網址/文件名/安裝包                                           | 狀態                                                         | 位置                    |
 | --------------: | :----------------------------------------------------------- | :----------------------------------------------------------- | :---------------------- |
-|        離線版 | bib2bbl.html [@GitHub](https://github.com/iihciyekub/must-thesis-tools/blob/master/bib2bbl.html) | 直接獨立運行                                                 | 項目路徑 `.tool` 目錄下 |
-|          在線版 | http://pychat.online/bib2bbl                                 | 在線訪問                                                     | 2024年3月前有效         |
-| chrome 擴展程序(已發布) | [Overleaf texAide](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN)                                 | 安裝成功後, 使用 chrome 瀏覽器在訪問 [overleaf](https://www.overleaf.com/read/mjzpcxztzqzv)上自動加載啟用 | [Chrome 瀏覽器應用商店下載](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN)     |
+| chrome 擴展程序(已發布) | [Overleaf texAide](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo)                                 | 安裝成功後, 使用 chrome 瀏覽器在訪問 [overleaf](https://www.overleaf.com/read/mjzpcxztzqzv)上自動加載啟用 | [Chrome 瀏覽器應用商店下載](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN)     |
 
 
 
