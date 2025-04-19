@@ -6,6 +6,8 @@
 *.log
 *.out
 *.toc
+*.lot
+*.lof
 
 # Ignore final PDF output
 *.pdf
