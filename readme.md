@@ -76,6 +76,11 @@ https://github.com/iihciyekub/MUST-Thesis/assets/30061185/d2c7fe3b-d14a-47a5-a71
 
 
 歷史版本:
+## 2025.04.19
+[**同步Overleaf在线项目**](https://www.overleaf.com/read/mjzpcxztzqzv#3b0b73)
+LastUpdate: Feb 21, 2025 at 12:23:13
+Mac上latexmk Version 4.86a编译通过
+
 ## 2020.03.29
 - Ver 0.1.1.2 (2020.03.29) [不推薦使用此舊版本,已停止維護]
 - ~~請使用 Texlive 2019-20190410 編譯環境, 官方鏡像下載地址: [Texlive 2019-20190410](https://mirror.bjtu.edu.cn/CTAN/systems/texlive/Images/)~~
