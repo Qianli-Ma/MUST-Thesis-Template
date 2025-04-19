@@ -1,0 +1,11 @@
+# Ignore latexmk files
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.aux
+*.log
+*.out
+*.toc
+
+# Ignore final PDF output
+*.pdf
