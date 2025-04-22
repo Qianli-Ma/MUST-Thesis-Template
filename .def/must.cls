@@ -1,15 +1,19 @@
 % 作者:Yongjian.Li & chatGPT-3.5 
 % 日期:2023-12-01
 
+\makeatletter
+\def\input@path{{../template}}
+\makeatother
+
 % 该行指定LaTeX版本为LaTeX2e
 \NeedsTeXFormat{LaTeX2e}
 % 颜色色彩库,需在最开始的时候加载
 \RequirePackage[dvipsnames, svgnames, x11names]{xcolor}
 % 该行声明该文件为一个类文件，并给出文件名.def/must
-\ProvidesClass{.def/must}
+\ProvidesClass{../template/.def/must}
 
 %定义所有资源文件所在目录
-\def\resourcePath{.def/.resource/}
+\def\resourcePath{../template/.def/.resource/}
 
 % 控制奇偶页的边距 奇偶页边距对称=是
 \newif\ifprint\printfalse

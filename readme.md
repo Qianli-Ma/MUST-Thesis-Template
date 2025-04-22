@@ -27,6 +27,16 @@ https://github.com/iihciyekub/MUST-Thesis/assets/30061185/d2c7fe3b-d14a-47a5-a71
 | GitHub 克隆| 本地編譯 | [**_GitHub_**](https://github.com/iihciyekub/MUST-Thesis/assets/30061185/f00ab6eb-6f1d-472f-8bc9-cdc4a1ca3e30)|
 
 **更新説明:**
+## 2025.02.21
+更新支持本地运行，支持以下目录结构
+├── Proposal/
+│   ├── introduction.tex
+│   └── references.bib
+├── template/
+│   ├── .def
+│   └── (other files related to the template)
+└── (other project files and folders)
+
 ## 2024.02.20
 - Ver 2.42.20 (2024.02.20)
 - [x] 修正排版細節;
