@@ -4,22 +4,23 @@
         % 英文處理
         % 設置目錄名稱
         \renewcommand{\contentsname}{CONTENT}
-        \markboth{CONTENT}{}
+        \markboth{CONTENT}{Content}
+        \fancyhead[R]{\fontsize{10pt}{10 pt}\selectfont Content}
         \tableofcontents
 
         % 如果設置 - 添加英文圖目錄
         \iffigt
             \clearpage
-            % \renewcommand{\listfigurename}{圖目錄}
-            \addcontentsline{toc}{chapter}{\hspace{\hdis em}List of Figures}
+            \addcontentsline{toc}{chapter}{\hspace{\hdis em}\textbf{List of Figures}}
+            \fancyhead[R]{\fontsize{10pt}{10 pt}\selectfont List of Figures}
             \listoffigures
         \fi
 
-        % 如果設置 - 添加中文表目錄
+        % 如果設置 - 添加英文表目錄
         \iftabt
             \clearpage
-            % \renewcommand{\listtablename}{表目錄}
-            \addcontentsline{toc}{chapter}{\hspace{\hdis em}List of Tables}
+            \addcontentsline{toc}{chapter}{\hspace{\hdis em}\textbf{List of Tables}}
+            \fancyhead[R]{\fontsize{10pt}{10 pt}\selectfont List of Tables}
             \listoftables
         \fi
     \else
@@ -74,4 +75,5 @@
     \pagestyle{fancy}
     \pagenumbering{arabic}
     \setcounter{page}{1}
+    \resetCEfancyhf
 }

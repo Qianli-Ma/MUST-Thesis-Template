@@ -1,4 +1,5 @@
-% 重定義引用段落的環境  
+% Oct 2, 2024 at 15:18:38 修正英文版摘要目录不显示目录问题
+% 重定義引用段落的環境 
 \let\oldquote\quote
 \let\endoldquote\endquote
 \renewenvironment{quote}
@@ -38,13 +39,12 @@
     % 設置表格行高
     \renewcommand{\arraystretch}{1.2}
     \ifwriteqEn
-        % \setlength{\baselineskip}{1.088\baselineskip}
-        % \fontsize{12 pt}{\baselineskip}\selectfont
+        % 清空页眉
+        \fancyhead{}
         \enfz
     \else
-        % word 的基准因子是1.3, 因此 1.5/1.2*1.3
-        % \setlength{\baselineskip}{2.45733228173131\baselineskip}
-        % \fontsize{14 pt}{\baselineskip}\selectfont
+        % resetCEfancyhf 命令在文件 < ./.def/b.2.setLayout.sty >
+        \resetCEfancyhf
         \cnfz
     \fi
     % 将表格的行高缩小为原始高度的一半。
@@ -55,4 +55,9 @@
     \iftp\addtitlepage\fi
     % 插入声明原创页
     \ifdp\adddeclarepage\fi
+    % 如果是英文版本时, 为摘要添加页页眉
+    \ifwriteqEn
+        % \pagestyle{fancy}
+        \fancyhead[R]{\fontsize{10pt}{10 pt}\selectfont Abstract}
+    \fi
 }

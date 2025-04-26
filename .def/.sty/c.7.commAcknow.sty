@@ -1,6 +1,9 @@
 \newenvironment{acknowpage}{
     \ifwriteqEn
         \setenchapter{Acknowledgement}
+        \pagestyle{fancy}
+        \fancyhead{}
+        \fancyhead[R]{\fontsize{10pt}{10 pt}\selectfont\leftmark}
     \else
         \setcnchapter{致謝}
     \fi
