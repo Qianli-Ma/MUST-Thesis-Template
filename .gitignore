@@ -11,3 +11,6 @@
 
 # Ignore final PDF output
 *.pdf
+
+# Ignore MacOS Finder files
+.DS_Store
