@@ -1,7 +1,10 @@
 \renewenvironment{appendix}{
-    \clearpage
+    \newpage
     \ifwriteqEn
         \setenchapter{Appendix}
+        \pagestyle{fancy}
+        \fancyhead{}
+        \fancyhead[R]{\fontsize{10pt}{10 pt}\selectfont\leftmark}
     \else
         \setcnchapter{附錄}
     \fi

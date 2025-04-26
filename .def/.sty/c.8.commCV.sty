@@ -77,6 +77,9 @@ ut/.style={
     % \chapter*{}
     \ifwriteqEn
         \setenchapter{Personal Resume}
+        \pagestyle{fancy}
+        \fancyhead{}
+        \fancyhead[R]{\fontsize{10pt}{10 pt}\selectfont\leftmark}
     \else
         \setcnchapter{個人簡歷}
     \fi
