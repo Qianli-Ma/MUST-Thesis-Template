@@ -25,10 +25,10 @@
 \RequirePackage{fancyhdr}
 \ifwriteqEn
     % 去除英文版的页眉线 
-    \renewcommand{\headrulewidth}{0 pt}
+    \renewcommand{\headrulewidth}{0pt}
 \else
     % 添加页眉线 
-    \renewcommand{\headrulewidth}{0.4 pt}
+    \renewcommand{\headrulewidth}{0.4pt}
 \fi
 \renewcommand{\footrulewidth}{0pt}
 \pagestyle{fancy}
@@ -40,14 +40,14 @@
 \newcommand{\resetCEfancyhf}{
     \ifwriteqEn
         \fancyhead[L]{}
-        \fancyhead[R]{\fontsize{10pt}{10 pt}\selectfont Chapter~\thechapter~\leftmark}
+        \fancyhead[R]{\fontsize{10pt}{10pt}\selectfont Chapter~\thechapter~\leftmark}
     \else
-        \fancyhead[L]{\fontsize{10pt}{10 pt}\selectfont\cnShortTitle}
+        \fancyhead[L]{\fontsize{10pt}{10pt}\selectfont\cnShortTitle}
         % \fancyhead[L]{}
-        \fancyhead[R]{\fontsize{10pt}{10 pt}\selectfont\leftmark}
+        \fancyhead[R]{\fontsize{10pt}{10pt}\selectfont\leftmark}
     \fi
     % 页脚页码
-    \fancyfoot[C]{\fontsize{10pt}{10 pt}\selectfont\thepage}
+    \fancyfoot[C]{\fontsize{10pt}{10pt}\selectfont\thepage}
     \raggedbottom
 }
 

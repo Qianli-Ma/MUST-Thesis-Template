@@ -2,12 +2,13 @@
 \tikzset{
 tl/.style={inner sep = 0, anchor = north west, align = left},
 ul/.style={inner sep = 0, anchor = center, font = {\cnfz}, minimum height, name = c1},
-ul2/.style={inner sep = 0,anchor = base, font = {\fontsize{11 pt}{\baselineskip}\selectfont},align = center, text width = 8 cm,name = c1}
+ul2/.style={inner sep = 0,anchor = base, font = {\fontsize{11pt}{\baselineskip}\selectfont},align = center, text width = 8 cm,name = c1}
 }
 
 % 英文模板下调用 GS004en.pdf 扉页
 \ifwriteqEn
-    \def\titlefilepath{\resourcePath GS004en.pdf}
+    % \def\titlefilepath{\resourcePath GS004en.pdf}
+    \def\titlefilepath{\detokenize{\resourcePath/GS004en_flat.pdf}}
 % 中文模板下调用 GS004.pdf 扉页
 \else
     \def\titlefilepath{\resourcePath GS004.pdf}
@@ -24,7 +25,7 @@ ul2/.style={inner sep = 0,anchor = base, font = {\fontsize{11 pt}{\baselineskip}
             \ifwriteqEn
                 \def\vdis{0.4}
                 \coordinate (tpos) at (8.5cm,-9.67cm);
-                \node[tl,font = {\fontsize{18 pt}{1.8\baselineskip}\selectfont},text width = 13.5 cm] at (0.44 cm,-2.35 cm)  {\enTitle};
+                \node[tl,font = {\fontsize{18pt}{1.8\baselineskip}\selectfont},text width = 13.5 cm] at (0.44 cm,-2.35 cm)  {\enTitle};
                 \node[ul] at (tpos) {\Name };
                 \node[ul,below = 0.81 of c1.center]{\StudentNo};
                 \node[ul,below = 0.69 cm of c1.south]{\Faculty};
@@ -36,8 +37,8 @@ ul2/.style={inner sep = 0,anchor = base, font = {\fontsize{11 pt}{\baselineskip}
                 \def\vdis{0.889}
                 \coordinate (tpos) at (8cm,-13.2);
                 \coordinate (entitlepos) at (0.82 cm,-6.1 cm);
-                \node[tl,font = {\fontsize{22 pt}{\baselineskip}\selectfont},text width = 12.5 cm] at (1.58 cm,-3.29 cm) {\cnTitle};
-                \node[tl,font = {\fontsize{18 pt}{\baselineskip}\selectfont},text width = 13.5 cm] at (0.9 cm,-6.16 cm)  {\enTitle};
+                \node[tl,font = {\fontsize{22pt}{\baselineskip}\selectfont},text width = 12.5 cm] at (1.58 cm,-3.29 cm) {\cnTitle};
+                \node[tl,font = {\fontsize{18pt}{\baselineskip}\selectfont},text width = 13.5 cm] at (0.9 cm,-6.16 cm)  {\enTitle};
                 \node[ul] at (tpos) {\Name };
                 \node[ul,below = 1.12 of c1.center]{\StudentNo};
                 \node[ul,below = 0.82 cm of c1.south]{\Faculty};
@@ -79,7 +80,7 @@ ul2/.style={inner sep = 0,anchor = base, font = {\fontsize{11 pt}{\baselineskip}
                 \node[ul2,right = 2cm of n2]{\DateofDeclaration};
 
                 % 授权部分
-                \node[ul2,name=R] at ($(O) + (-1.4 cm,-19.35 cm) +(0cm,\choo cm)$) {\Checkmark};
+                \node[ul2,name=R] at ($(O) + (-1.4 cm,-19.35 cm) +(0cm,\choo cm)$) {\icon{\Checkmark}};
                 \node[ul2,anchor=center] (n3) at  ($(O) + (1 cm,-23.2 cm)$) {
                     \includegraphics[width=1.5cm]{\mySign}
                 }; 
@@ -125,9 +126,10 @@ ul2/.style={inner sep = 0,anchor = base, font = {\fontsize{11 pt}{\baselineskip}
 \setlength{\pageheight}{\paperheight}
 \uselengthunit{cm}
 \tikzset{
-lines/.style={red,line width=1.2pt, {<[length=6pt].<}-{>.>[length=6pt]}},
-linenoa/.style={red,opacity=0.5,line width=1.2pt },
-ptxt/.style={pos=0.53,sloped,fill=white,text=red,font=\Large\bfseries }
+    lines/.style={red,line width=1.2pt, {<[length=6pt].<}-{>.>[length=6pt]}},
+    linenoa/.style={red,opacity=0.5,line width=1.2pt },
+    % ptxt/.style={pos=0.53,sloped,fill=white,text=red,font=\Large\bfseries }
+    ptxt/.style={pos=0.53,sloped,fill=white,text=red,font={\normalfont\Large\bfseries}}
 }
 \draw [lines] ($(nw)+(\el cm,0)$) -- ($(sw)+(\el cm,0)$) node [ptxt,below,pos=0.43] {\printlength{\pageheight}};
 \draw [lines] ($(ne)+(-\er cm,0)$) -- ($(se)+(-\er cm,0)$) ;

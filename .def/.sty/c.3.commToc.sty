@@ -5,14 +5,14 @@
         % 設置目錄名稱
         \renewcommand{\contentsname}{CONTENT}
         \markboth{CONTENT}{Content}
-        \fancyhead[R]{\fontsize{10pt}{10 pt}\selectfont Content}
+        \fancyhead[R]{\fontsize{10pt}{10pt}\selectfont Content}
         \tableofcontents
 
         % 如果設置 - 添加英文圖目錄
         \iffigt
             \clearpage
             \addcontentsline{toc}{chapter}{\hspace{\hdis em}\textbf{List of Figures}}
-            \fancyhead[R]{\fontsize{10pt}{10 pt}\selectfont List of Figures}
+            \fancyhead[R]{\fontsize{10pt}{10pt}\selectfont List of Figures}
             \listoffigures
         \fi
 
@@ -20,7 +20,7 @@
         \iftabt
             \clearpage
             \addcontentsline{toc}{chapter}{\hspace{\hdis em}\textbf{List of Tables}}
-            \fancyhead[R]{\fontsize{10pt}{10 pt}\selectfont List of Tables}
+            \fancyhead[R]{\fontsize{10pt}{10pt}\selectfont List of Tables}
             \listoftables
         \fi
     \else

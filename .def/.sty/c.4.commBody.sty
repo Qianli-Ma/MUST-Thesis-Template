@@ -49,15 +49,15 @@
     \fi
     % 将表格的行高缩小为原始高度的一半。
     % \renewcommand\arraystretch{0.5}
-    % 插入 学校校徽 logo
+    插入 学校校徽 logo
     \ifwm\addBackgroundPic{\resourcePath mustlogo.jpg}\fi
     % 插入扉页
     \iftp\addtitlepage\fi
-    % 插入声明原创页
-    \ifdp\adddeclarepage\fi
-    % 如果是英文版本时, 为摘要添加页页眉
-    \ifwriteqEn
-        % \pagestyle{fancy}
-        \fancyhead[R]{\fontsize{10pt}{10 pt}\selectfont Abstract}
-    \fi
+    % % 插入声明原创页
+    % \ifdp\adddeclarepage\fi
+    % % 如果是英文版本时, 为摘要添加页页眉
+    % \ifwriteqEn
+    %     % \pagestyle{fancy}
+    %     \fancyhead[R]{\fontsize{10pt}{10pt}\selectfont Abstract}
+    % \fi
 }

@@ -1,5 +1,5 @@
 \begin{thebibliography} {} 
-\bibitem[zh, 2019]{zh2019}{\fontsize{16 pt}{\baselineskip}\selectfont 中文部分：}
+\bibitem[zh, 2019]{zh2019}{\fontsize{16pt}{\baselineskip}\selectfont 中文部分：}
 {\cnfz 
 
 %zh:1/22
@@ -147,7 +147,7 @@
 
 
 
-\vspace{0.5cm}\bibitem[En, 2019]{en2019}{\fontsize{16 pt}{\baselineskip}\selectfont 英文部分：}
+\vspace{0.5cm}\bibitem[En, 2019]{en2019}{\fontsize{16pt}{\baselineskip}\selectfont 英文部分：}
 {\enfz 
 
 %en:1/29

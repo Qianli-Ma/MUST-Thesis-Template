@@ -13,6 +13,7 @@
     \newdateformat{datek}{\THEYEAR 年\THEMONTH 月\THEDAY 日}
 \fi
 
+
 % 逻辑语句支持包
 \RequirePackage{ifthen}
 
@@ -21,32 +22,37 @@
 
 % 自定义字体大小命令 \fz
 \NewDocumentCommand{\fz}{O{14pt} O{1.625}}{%
-\fontsize{#1}{\baselineskip}\selectfont
-\linespread{#2}\selectfont #1
+  \linespread{#2}\selectfont% set baselinestretch first
+  \fontsize{#1}{\baselineskip}\selectfont% then set font size (use current \baselineskip)
 }
+
 
 % 自定义英文字体大小命令 \enfz
 % \newcommand{\enfz}{
-% % \setlength{\baselineskip}{13.7931034482759 pt}
-% \setlength{\baselineskip}{13.4 pt}\fontsize{12 pt}{\baselineskip}\selectfont
+% % \setlength{\baselineskip}{13.7931034482759pt}
+% \setlength{\baselineskip}{13.4pt}\fontsize{12pt}{\baselineskip}\selectfont
 % }
 
 \newcommand{\enfz}{
   % 设置字体大小和行间距
-  \fontsize{12 pt}{13.4 pt}\selectfont
+  \fontsize{12pt}{13.4pt}\selectfont
 }
+
+
+% Provide a simple icon wrapper so \icon{\Checkmark} works during setup
+\newcommand{\icon}[1]{\leavevmode#1}
 
 
 
 % 自定义中文字体大小命令 \cnfz
 % \newcommand{\cnfz}{
-% \setlength{\baselineskip}{29.48804 pt}
-% \fontsize{14 pt}{\baselineskip}\selectfont
+% \setlength{\baselineskip}{29.48804pt}
+% \fontsize{14pt}{\baselineskip}\selectfont
 % }
 
 \newcommand{\cnfz}{
-% \setlength{\baselineskip}{29.48804 pt}
-\fontsize{14 pt}{29.48804 pt}\selectfont
+% \setlength{\baselineskip}{29.48804pt}
+\fontsize{14pt}{29.48804pt}\selectfont
 }
 
 
@@ -75,8 +81,25 @@
 \RequirePackage{pdfpages}
 
 % 加载 ico 小图标宏包
+
 \RequirePackage{fontawesome5}
 
+% FA4 -> FA5 compatibility shims
+% Provide common FA4 macro names as wrappers for fontawesome5's \faIcon.
+% Style options: solid (default), regular, light, brands
+\providecommand{\faHandORight}{\faIcon{hand-point-right}}
+\providecommand{\faHandOLeft}{\faIcon{hand-point-left}}
+\providecommand{\faGithub}{\faIcon[brands]{github}}
+\providecommand{\faTwitter}{\faIcon[brands]{twitter}}
+\providecommand{\faFacebook}{\faIcon[brands]{facebook}}
+\providecommand{\faEnvelopeO}{\faIcon{envelope}}
+\providecommand{\faFileO}{\faIcon{file}}
+\providecommand{\faEdit}{\faIcon{edit}}
+\providecommand{\faHistory}{\faIcon{history}}
+\providecommand{\faLeaf}{\faIcon{leaf}}
+\providecommand{\faXSolidBrush}{\faBrush}
+% % \newcommand{\icon}[1]{\leavevmode#1} % force horizontal mode for icons
+\providecommand{\faCheckmark}{\faCheck}
 
 \RequirePackage{printlen}
 % 使用 \newlength 命令来创建长度变量，并使用 \setlength 命令来设置长度的值。

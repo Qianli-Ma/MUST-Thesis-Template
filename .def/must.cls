@@ -1,5 +1,6 @@
-% 作者:Yongjian.Li & chatGPT-3.5 
-% 日期:2023-12-01
+% 作者:Qianli Ma 
+% 日期:2025/10/10
+% 版本:2.0
 
 \makeatletter
 \def\input@path{{../template}}
@@ -10,7 +11,13 @@
 % 颜色色彩库,需在最开始的时候加载
 \RequirePackage[dvipsnames, svgnames, x11names]{xcolor}
 % 该行声明该文件为一个类文件，并给出文件名.def/must
-\ProvidesClass{../template/.def/must}
+% \ProvidesClass{../template/.def/must}
+\ProvidesClass{must}[2025/10/10 MUST thesis class v2.0]
+
+% % Ensure \Checkmark exists extremely early (used by icons during class setup)
+% \RequirePackage{pifont}
+% \providecommand{\Checkmark}{\ding{51}}
+
 
 %定义所有资源文件所在目录
 \def\resourcePath{../template/.def/.resource/}
@@ -63,15 +70,16 @@
 \ifprint\LoadClass[twoside,openany]{book}\else\LoadClass[oneside,openany]{book}\fi
 
 
-% 加载宏包
+% % 加载宏包
 \input{.def/.sty/a.1.packBase.sty}
 \input{.def/.sty/a.2.packMath.sty}
 \input{.def/.sty/a.3.packTikz.sty}
 \input{.def/.sty/a.4.packFig.sty}
-\input{.def/.sty/a.5.packTable.sty}
+% \input{.def/.sty/a.5.packTable.sty}
+\input{a.5.packTable.sty}
 
 
-% 加载设置类的样式文件
+% % 加载设置类的样式文件
 \input{.def/.sty/b.1.setFont.sty}
 \input{.def/.sty/b.2.setLayout.sty}
 \input{.def/.sty/b.3.setCaption.sty}

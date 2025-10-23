@@ -4,7 +4,7 @@
         \setenchapter{Reference List}
         \pagestyle{fancy}
         \fancyhead{}
-        \fancyhead[L]{\fontsize{10pt}{10 pt}\selectfont\leftmark}
+        \fancyhead[L]{\fontsize{10pt}{10pt}\selectfont\leftmark}
     \else
         \setcnchapter{參考文獻}
     \fi
@@ -24,7 +24,9 @@
             \end{itemize}
             }
             \fi
-            \bibliographystyle{../../../template/.def/.sty/apa5}
+
+            % \bibliographystyle{../../../template/.def/.sty/apa5}
+            \bibliographystyle{apa5}
             \bibliography{#1.bib}
         }{%
             不存在 #1.bib 或 #1.bbl 文件.
