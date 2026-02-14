@@ -19,8 +19,22 @@
 % \providecommand{\Checkmark}{\ding{51}}
 
 
-%定义所有资源文件所在目录
-\def\resourcePath{../template/.def/.resource/}
+% %定义所有资源文件所在目录
+% \def\resourcePath{.def/.resource/}
+
+\RequirePackage{currfile}
+
+\makeatletter
+% 允许从外部（如 proposal.tex）通过 \def\templatePath{...} 覆盖模板路径
+% 如果未定义，则使用默认值 ../template/（适用于在 template/ 目录下编译）
+\providecommand{\templatePath}{../template/}%
+
+\edef\must@classdir{\templatePath.def/}%
+\edef\resourcePath{\must@classdir.resource/}%
+\typeout{[must.cls] must class dir -> \must@classdir}%
+\typeout{[must.cls] resourcePath -> \resourcePath}%
+\makeatother
+
 
 % 控制奇偶页的边距 奇偶页边距对称=是
 \newif\ifprint\printfalse
