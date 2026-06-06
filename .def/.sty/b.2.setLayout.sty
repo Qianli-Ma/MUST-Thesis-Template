@@ -32,6 +32,9 @@
 \renewcommand{\footrulewidth}{0pt}
 \pagestyle{fancy}
 \fancyhf{}
+% Centered bottom page number active on every page (including front matter).
+% Title page suppresses it via \thispagestyle{empty}.
+\fancyfoot[C]{\fontsize{10pt}{10pt}\selectfont\thepage}
 \renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
 
 
@@ -45,8 +48,6 @@
         % \fancyhead[L]{}
         \fancyhead[R]{\fontsize{10pt}{10pt}\selectfont\leftmark}
     \fi
-    % 页脚页码
-    \fancyfoot[C]{\fontsize{10pt}{10pt}\selectfont\thepage}
     \raggedbottom
 }
 
