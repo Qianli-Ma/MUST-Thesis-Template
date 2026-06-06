@@ -32,7 +32,7 @@
     \titlespacing{\section}{0pt}{10pt}{10pt}[0 pt]
     %3
     \titleformat{\subsection}[hang]
-        {\fontsize{16pt}{1.8\baselineskip}\selectfont}
+        {\itshape\fontsize{14pt}{1.8\baselineskip}\selectfont}
         {\thesubsection}
         {0.5 em}
         {}
@@ -82,6 +82,7 @@
 
 \RequirePackage{caption}
 \RequirePackage{subcaption}
+\captionsetup[table]{position=above}
 \captionsetup{
     aboveskip = 0.2 em, % 標題上下文距離
     belowskip = 0.2 em,
