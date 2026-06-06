@@ -11,6 +11,10 @@
 
 # Ignore final PDF output
 *.pdf
+# whitelist PDF
+!研究生學位論文寫作指導.pdf
+!計算機科學與工程學院«論文及開題寫作指引»範文格式.pdf
 
 # Ignore MacOS Finder files
 .DS_Store
+

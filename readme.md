@@ -1,32 +1,19 @@
 
-(推薦) 直接獲取 **_overleaf_** 在線模板:
-**Join** [**_overleaf online project_ (持續更新)**](https://www.overleaf.com/read/mjzpcxztzqzv#3b0b73)
-
-**Q1:** 第一次使用,如何開始
-
-https://github.com/iihciyekub/MUST-Thesis/assets/30061185/18049f49-20f1-4e1d-8c25-cb7410ab5a2c
-
-**Q2:** 如何通過 chrome 應用 overleaf texAide 將 bib 參考文獻轉換為 MUST 指定格式的 bbl 文件?
-
-https://github.com/iihciyekub/MUST-Thesis/assets/30061185/d2c7fe3b-d14a-47a5-a71c-98ea1f6d925f
-
-
----
-
-[must-thesis latex template ***User's Guide***](https://iihciyekub.github.io/must-thesis-manual/)
-
-[Chrome extensions: ***overleaf texAide***](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo)
-
 #  a $\LaTeX$ template for MUST-Thesis
 
 [LICENSE](http://www.latex-project.org/lppl.txt)
 
-|            項目獲取方法 | 編譯方式 |鏈接|
-| --------------: |  :---------------------- |:---------------------- |
-| 加入 overleaf 在線獲取最新版本| overleaf 在線編譯 | **Join** [**_Overleaf online project_**](https://www.overleaf.com/read/mjzpcxztzqzv#3b0b73)|
-| GitHub 克隆| 本地編譯 | [**_GitHub_**](https://github.com/iihciyekub/MUST-Thesis/assets/30061185/f00ab6eb-6f1d-472f-8bc9-cdc4a1ca3e30)|
+|                   項目獲取方法 | 編譯方式          | 鏈接                                                                                                           |
+| -----------------------------: | :---------------- | :------------------------------------------------------------------------------------------------------------- |
+| 加入 overleaf 在線獲取最新版本 | overleaf 在線編譯 | **Join** [**_Overleaf online project_**](https://www.overleaf.com/read/mjzpcxztzqzv#3b0b73)                    |
+|                    GitHub 克隆 | 本地編譯          | [**_GitHub_**](https://github.com/iihciyekub/MUST-Thesis/assets/30061185/f00ab6eb-6f1d-472f-8bc9-cdc4a1ca3e30) |
 
 **更新説明:**
+## 2026.06.06
+按 計算機科學與工程學院«論文及開題寫作指引»範文格式.pdf
+和 研究生學位論文寫作指導.pdf
+進行修改，修改來自claude code
+
 ## 2025.02.21
 更新支持本地运行，支持以下目录结构
 ├── Proposal/
@@ -61,9 +48,9 @@ https://github.com/iihciyekub/MUST-Thesis/assets/30061185/d2c7fe3b-d14a-47a5-a71
 - 修正澳門科技大學校徽（嚴格使用學校提供的低分辨率校徽,未來期待美工加入,繪製一個嚴格一致的矢量圖）;
 - 解決其它一系列bug問題;
 
-|            方法 | 網址/文件名/安裝包                                           | 狀態                                                         | 位置                    |
-| --------------: | :----------------------------------------------------------- | :----------------------------------------------------------- | :---------------------- |
-| chrome 擴展程序(已發布) | [Overleaf texAide](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo)                                 | 安裝成功後, 使用 chrome 瀏覽器在訪問 [overleaf](https://www.overleaf.com/read/mjzpcxztzqzv)上自動加載啟用 | [Chrome 瀏覽器應用商店下載](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN)     |
+|                    方法 | 網址/文件名/安裝包                                                                                                 | 狀態                                                                                                      | 位置                                                                                                                                 |
+| ----------------------: | :----------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
+| chrome 擴展程序(已發布) | [Overleaf texAide](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo) | 安裝成功後, 使用 chrome 瀏覽器在訪問 [overleaf](https://www.overleaf.com/read/mjzpcxztzqzv)上自動加載啟用 | [Chrome 瀏覽器應用商店下載](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN) |
 
 
 
@@ -71,17 +58,17 @@ https://github.com/iihciyekub/MUST-Thesis/assets/30061185/d2c7fe3b-d14a-47a5-a71
 
 - 以下是學校提供的關於論文排版所有細節要求的附件(截止 2024-04-21 可訪問).
 
-|  NO. | 文件名                                                       | 本項目參考或使用 | 嚴格      |
-| ---: | :----------------------------------------------------------- | ---------------- | ---- |
-|    1 | [扉頁格式](https://www.must.edu.mo/images/GSO/files/sgsdocument/GS004.pdf) | 使用             | ✓    |
-|    2 | [學位論文原創性聲明](https://www.must.edu.mo/images/GSO/files/S023學位論文原創性聲明BI.pdf) | 使用             | ✓    |
-|    3 | [論文寫作指導](https://www.must.edu.mo/images/GSO/files/sgsdocument/GS002.pdf) | 參考             | ✓    |
-|    4 | [學位論文統一格式範例(Chinese)](https://www.must.edu.mo/images/GSO/files/sgsdocument/GS001.pdf) | 參考             | ✓    |
-|     | [學位論文統一格式範例(English)](https://www.must.edu.mo/images/GSO/files/sgsdocument/Thesis-sample-Eng.pdf) | 參考             | ✓    |
-|    5 | [研究生論文格式參考資料(APA)](http://www.must.edu.mo/images/SGS/files/APA_7th_0710.pdf) | 參考             | ✘     |
-|    6 | [校徽水印](https://lib.must.edu.mo/sites/default/files/must-logo.jpg) | 使用             | ✓    |
-|    7 | [國家文後參考文獻著錄規則](http://www.must.edu.mo/images/SGS/files/GBT7714_2015.pdf) | 無               | ✘    |
-|    8 | [MLA參考文獻格式](https://www.must.edu.mo/images/SGS/files/MLA參考文獻格式.pdf) | 無               | ✘    |
+|  NO. | 文件名                                                                                                                          | 本項目參考或使用 | 嚴格 |
+| ---: | :------------------------------------------------------------------------------------------------------------------------------ | ---------------- | ---- |
+|    1 | [扉頁格式](https://www.must.edu.mo/images/GSO/files/sgsdocument/GS004.pdf)                                                      | 使用             | ✓    |
+|    2 | [學位論文原創性聲明](https://www.must.edu.mo/images/GSO/files/S023學位論文原創性聲明BI.pdf)                                     | 使用             | ✓    |
+|    3 | [論文寫作指導](https://www.must.edu.mo/images/GSO/files/sgsdocument/GS002.pdf)                                                  | 參考             | ✓    |
+|    4 | [學位論文統一格式範例(Chinese)](https://www.must.edu.mo/images/GSO/files/sgsdocument/GS001.pdf)                                 | 參考             | ✓    |
+|      | [學位論文統一格式範例(English)](https://www.must.edu.mo/images/GSO/files/sgsdocument/Thesis-sample-Eng.pdf)                     | 參考             | ✓    |
+|    5 | [研究生論文格式參考資料(APA)](http://www.must.edu.mo/images/SGS/files/APA_7th_0710.pdf)                                         | 參考             | ✘    |
+|    6 | [校徽水印](https://lib.must.edu.mo/sites/default/files/must-logo.jpg)                                                           | 使用             | ✓    |
+|    7 | [國家文後參考文獻著錄規則](http://www.must.edu.mo/images/SGS/files/GBT7714_2015.pdf)                                            | 無               | ✘    |
+|    8 | [MLA參考文獻格式](https://www.must.edu.mo/images/SGS/files/MLA參考文獻格式.pdf)                                                 | 無               | ✘    |
 |    9 | [碩士與博士論文參考文獻格式補充説明_2022](https://www.must.edu.mo/images/MSB/files/碩士與博士論文參考文獻格式補充説明_2022.pdf) | 參考             | ✓    |
 
 
