@@ -8,7 +8,18 @@
 | 加入 overleaf 在線獲取最新版本 | overleaf 在線編譯 | **Join** [**_Overleaf online project_**](https://www.overleaf.com/read/mjzpcxztzqzv#3b0b73)                    |
 |                    GitHub 克隆 | 本地編譯          | [**_GitHub_**](https://github.com/iihciyekub/MUST-Thesis/assets/30061185/f00ab6eb-6f1d-472f-8bc9-cdc4a1ca3e30) |
 
+---
 **更新説明:**
+
+## 2026.06.07
+
+依据学院论文格式规范，由 Claude Code 对模板进行以下修正：
+- [x] **小节标题字体**（`b.3.setCaption.sty`）：英文 `\subsection` 字号由 16pt 改为 14pt 斜体，符合规范第 4.2.5 条要求；
+- [x] **全局行距**（`a.1.packBase.sty`）：加入 `\AtBeginDocument{\singlespacing}` 确保正文单倍行距，并修正直接呼叫 `\singlespacing` 导致 pgf 箭头库出现 `\unskip in vertical mode` 编译错误的问题；
+- [x] **页眉左侧标题**（`b.2.setLayout.sty`）：英文写作模式下页眉左侧由空白改为显示论文短题目（`\enShortTitle`，10pt），符合规范第 4.2.4 条要求；
+- [x] **表格标题位置**（`b.3.setCaption.sty`）：加入 `\captionsetup[table]{position=above}` 设定表格标题间距为置顶模式，符合规范第 4.2.8 条要求（注意：仍需在各章节 `table` 环境中将 `\caption` 写于 `tabular` 之前）。
+
+
 ## 2026.06.06
 按 計算機科學與工程學院«論文及開題寫作指引»範文格式.pdf
 和 研究生學位論文寫作指導.pdf
