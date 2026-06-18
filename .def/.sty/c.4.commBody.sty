@@ -53,10 +53,10 @@
     % 插入扉页
     \iftp\addtitlepage\fi
     % % 插入声明原创页
-    % \ifdp\adddeclarepage\fi
-    % % 如果是英文版本时, 为摘要添加页页眉
-    % \ifwriteqEn
-    %     % \pagestyle{fancy}
-    %     \fancyhead[R]{\fontsize{10pt}{10pt}\selectfont Abstract}
-    % \fi
+    \ifdp\adddeclarepage\fi
+    % 如果是英文版本时, 为摘要添加页页眉
+    \ifwriteqEn
+        % \pagestyle{fancy}
+        \fancyhead[R]{\fontsize{10pt}{10pt}\selectfont Abstract}
+    \fi
 }

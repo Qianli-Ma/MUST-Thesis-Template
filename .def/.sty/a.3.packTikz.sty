@@ -50,18 +50,20 @@
 
 
 
-% \RequirePackage{dingbat} % defines \DingCheckmark etc.
-% 打勾打X的符号
-\newcommand{\dingfamily}{\fontencoding{U}\fontfamily{ding}\selectfont}
+% % \RequirePackage{dingbat} % defines \DingCheckmark etc.
+% % 打勾打X的符号
+% \newcommand{\dingfamily}{\fontencoding{U}\fontfamily{ding}\selectfont}
+
+% \makeatletter
 % \newcommand{\@chooseSymbol}[1]{{\dingfamily\symbol{#1}}}
-\makeatletter
-\newcommand{\chooseSymbol}[1]{{\dingfamily\symbol{#1}}}
-\makeatother
-% \newcommand{\icon{\Checkmark}}{\@chooseSymbol{'041}}
-% \newcommand{\icon{\CheckmarkBold}}{\@chooseSymbol{'042}}
-% \newcommand{\icon{\XSolidBrush}}{\@chooseSymbol{'045}}
+% \newcommand{\chooseSymbol}[1]{\@chooseSymbol{#1}}
+% \makeatother
+
+% % \providecommand{\Checkmark}{\chooseSymbol{'041}}
+% % \providecommand{\CheckmarkBold}{\chooseSymbol{'042}}
+% % \providecommand{\XSolidBrush}{\chooseSymbol{'045}}
 
 \RequirePackage{pifont}
-\providecommand{\Checkmark}{\@chooseSymbol{'041}}
-\providecommand{\CheckmarkBold}{\@chooseSymbol{'042}}
-\providecommand{\XSolidBrush}{\@chooseSymbol{'045}}
+\providecommand{\Checkmark}{\ding{51}}
+\providecommand{\CheckmarkBold}{\ding{52}}
+\providecommand{\XSolidBrush}{\ding{55}}
