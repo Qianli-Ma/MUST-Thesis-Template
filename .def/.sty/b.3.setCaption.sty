@@ -33,17 +33,21 @@
     %3
     \titleformat{\subsection}[hang]
         {\itshape\fontsize{14pt}{1.8\baselineskip}\selectfont}
-        {\thesubsection}
-        {0.5 em}
+        {\normalfont\thesubsection}
+        {0.5em}
         {}
-    \titlespacing{\subsection}{0pt}{5pt}{5pt}[0 pt]
+
+    \titlespacing{\subsection}{0pt}{5pt}{5pt}[0pt]
+
     % 4
     \titleformat{\subsubsection}[hang]
         {\itshape\fontsize{14pt}{1.8\baselineskip}\selectfont}
-        {\thesubsubsection}
-        {1 em}
+        {\normalfont\thesubsubsection}
+        {1em}
         {}
-    \titlespacing{\subsubsection}{0pt}{5pt}{5pt}[0 pt]
+
+\titlespacing{\subsubsection}{0pt}{5pt}{5pt}[0pt]
+
 \else
     \titleformat{\chapter}[hang]
         {\centering\bfseries\fontsize{22pt}{\baselineskip}\selectfont}
