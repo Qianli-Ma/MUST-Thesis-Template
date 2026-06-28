@@ -9,10 +9,13 @@
 
 % 添加校徽 logo 宏命令设置
 \RequirePackage{eso-pic}
+\newif\ifMUSTDeclarationPage
 \newcommand\addBackgroundPic[1]{%
 \AddToShipoutPicture{
     \put(0,0){%
         \parbox[b][\paperheight]{\paperwidth}{%
+            \ifMUSTDeclarationPage
+            \else
             \vfill
             % 页面奇偶页边距对称的情况下
             \centering
@@ -27,6 +30,7 @@
             \fi
             \includegraphics[width=0.86\textwidth,keepaspectratio]{#1}%
             \vfill
+            \fi
             }
         }
     }
