@@ -1,58 +1,192 @@
-% tikz 样式设置
+% -------------------------------------------------
+% TikZ styles
+% -------------------------------------------------
 \tikzset{
-tl/.style={inner sep = 0, anchor = north west, align = left},
-ul/.style={inner sep = 0, anchor = center, font = {\cnfz}, minimum height=1pt, name = c1},
-ul2/.style={inner sep = 0,anchor = base, font = {\fontsize{11pt}{\baselineskip}\selectfont},align = center, text width = 8 cm,name = c1}
+    tl/.style={
+        inner sep=0,
+        anchor=north west,
+        align=left
+    },
+    ul/.style={
+        inner sep=0,
+        anchor=center,
+        font={\cnfz},
+        minimum height=1pt,
+        name=c1
+    },
+    ul2/.style={
+        inner sep=0,
+        anchor=base,
+        font={\fontsize{11pt}{\baselineskip}\selectfont},
+        align=center,
+        text width=8cm,
+        name=c1
+    },
+    coverTitle/.style={
+        anchor=north west,
+        inner sep=0,
+        font={\rmfamily\mdseries\fontsize{18pt}{1.8\baselineskip}\selectfont}
+    },
+    coverInfo/.style={
+        anchor=north west,
+        inner sep=0,
+        font={\rmfamily\mdseries\fontsize{14.04pt}{16pt}\selectfont}
+    }
 }
 
-% 英文模板下调用 GS004en.pdf 扉页
+% -------------------------------------------------
+% Cover-page file paths
+% -------------------------------------------------
 \ifwriteqEn
     \def\titlefilepath{\resourcePath GS004en.pdf}
-    % \def\titlefilepath{\detokenize{\resourcePath/GS004en_flat.pdf}}
-% 中文模板下调用 GS004.pdf 扉页
 \else
     \def\titlefilepath{\resourcePath GS004.pdf}
 \fi
 
-% 定义扉页文字排版
+% -------------------------------------------------
+% English cover-page helper settings
+% -------------------------------------------------
+\newlength{\coverValueWidth}
+\setlength{\coverValueWidth}{8cm}
+
+\newcommand{\coverlabel}[2]{%
+    \node[coverInfo] at ($(labelx)+(0,#1)$) {#2};%
+}
+
+\newcommand{\covercolon}[1]{%
+    \node[coverInfo] at ($(colonx)+(0,#1)$) {：};%
+}
+
+\newcommand{\covervalue}[2]{%
+    \node[
+        coverInfo,
+        anchor=north west,
+        inner sep=0
+    ] at ($(linex)+(0,#1)$)
+    {\makebox[\coverValueWidth][c]{#2}};%
+}
+
+\newcommand{\coverline}[1]{%
+    \draw[line width=0.48pt]
+        ($(linex)+(0,#1)$) --
+        ($(linex)+(\coverValueWidth,#1)$);%
+}
+
+% -------------------------------------------------
+% Add title page
+% -------------------------------------------------
 \newcommand{\addtitlepage}{
-    \IfFileExists{\titlefilepath}{
-        \clearpage
-        \thispagestyle{plain}
-        \thispagestyle{empty}
+    \clearpage
+    \thispagestyle{plain}
+    \thispagestyle{empty}
+
+    \ifwriteqEn
+        % -------------------------------------------------
+        % English page: no PDF background
+        % -------------------------------------------------
         \begin{tikzpicture}[remember picture,overlay]
-            \node[inner sep = 0] at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight]{\titlefilepath}};
-            \ifwriteqEn
-                \def\vdis{0.4}
-                \coordinate (tpos) at (8.5cm,-9.67cm);
-                \node[tl,font = {\fontsize{18pt}{1.8\baselineskip}\selectfont},text width = 13.5 cm] at (0.44 cm,-2.35 cm)  {\enTitle};
-                \node[ul] at (tpos) {\Name };
-                \node[ul,below = 0.81 of c1.center]{\StudentNo};
-                \node[ul,below = 0.69 cm of c1.south]{\Faculty};
-                \node[ul,below = 0.66 cm of c1.south]{\Program};
-                \node[ul,below = 0.64 cm of c1.south]{\Major};
-                \node[ul,below = 0.67 cm of c1.south]{\Supervisor};
-                \node[ul,below = 0.67 cm of c1.south]{\DateofWriting};
-            \else
+
+            % Title
+            \node[coverTitle]
+                at ($(current page.north west)+(2.86cm,-5.07cm)$)
+                {Title:};
+
+            \node[
+                coverTitle,
+                text width=13.5cm
+            ] at ($(current page.north west)+(4.80cm,-5.07cm)$)
+                {\enTitle};
+
+            % Information block coordinates
+            \coordinate (labelx) at ($(current page.north west)+(5.56cm,0)$);
+            \coordinate (colonx) at ($(current page.north west)+(8.27cm,0)$);
+            \coordinate (linex)  at ($(current page.north west)+(8.93cm,0)$);
+
+            % Name
+            \coverlabel{-12.24cm}{Name}
+            \covercolon{-12.24cm}
+            \covervalue{-12.24cm}{\Name}
+            \coverline{-12.89cm}
+
+            % Student No.
+            \coverlabel{-13.15cm}{Student No.}
+            \covercolon{-13.15cm}
+            \covervalue{-13.15cm}{\StudentNo}
+            \coverline{-13.93cm}
+
+            % Faculty A, no underline
+            \coverlabel{-14.28cm}{Faculty}
+            \covercolon{-14.28cm}
+            \covervalue{-14.28cm}{\FacultyA}
+
+            % Faculty B, underlined
+            \covervalue{-14.84cm}{\FacultyB}
+            \coverline{-15.49cm}
+
+            % Program, shifted down
+            \coverlabel{-15.95cm}{Program}
+            \covercolon{-15.95cm}
+            \covervalue{-15.95cm}{\Program}
+            \coverline{-16.60cm}
+
+            % Major
+            \coverlabel{-17.06cm}{Major}
+            \covercolon{-17.06cm}
+            \covervalue{-17.06cm}{\Major}
+            \coverline{-17.71cm}
+
+            % Supervisor
+            \coverlabel{-18.17cm}{Supervisor}
+            \covercolon{-18.17cm}
+            \covervalue{-18.17cm}{\Supervisor}
+            \coverline{-18.82cm}
+
+            % Date
+            \coverlabel{-19.32cm}{Date}
+            \covercolon{-19.32cm}
+            \covervalue{-19.32cm}{\DateofWriting}
+            \coverline{-19.97cm}
+
+        \end{tikzpicture}
+
+    \else
+        % -------------------------------------------------
+        % Chinese page: use PDF background exactly as before
+        % -------------------------------------------------
+        \IfFileExists{\titlefilepath}{
+            \begin{tikzpicture}[remember picture,overlay]
+                \node[inner sep=0] at (current page.center)
+                    {\includegraphics[width=\paperwidth,height=\paperheight]{\titlefilepath}};
+
                 \def\vdis{0.889}
                 \coordinate (tpos) at (8cm,-13.2);
                 \coordinate (entitlepos) at (0.82 cm,-6.1 cm);
-                \node[tl,font = {\fontsize{22pt}{\baselineskip}\selectfont},text width = 12.5 cm] at (1.58 cm,-3.29 cm) {\cnTitle};
-                \node[tl,font = {\fontsize{18pt}{\baselineskip}\selectfont},text width = 13.5 cm] at (0.9 cm,-6.16 cm)  {\enTitle};
-                \node[ul] at (tpos) {\Name };
-                \node[ul,below = 1.12 of c1.center]{\StudentNo};
-                \node[ul,below = 0.82 cm of c1.south]{\Faculty};
-                \node[ul,below = 0.83 cm of c1.south]{\Program};
-                \node[ul,below = 0.83 cm of c1.south]{\Major};
-                \node[ul,below = 0.83 cm of c1.south]{\Supervisor};
-                \node[ul,below = 0.98 cm of c1.south]{\DateofWriting};
-            \fi
-        \end{tikzpicture}
-        }{
-        不存在,\titlefilepath,文件欠缺!
-        }
-}
 
+                \node[
+                    tl,
+                    font={\fontsize{22pt}{\baselineskip}\selectfont},
+                    text width=12.5cm
+                ] at (1.58cm,-3.29cm) {\cnTitle};
+
+                \node[
+                    tl,
+                    font={\fontsize{18pt}{\baselineskip}\selectfont},
+                    text width=13.5cm
+                ] at (0.9cm,-6.16cm) {\enTitle};
+
+                \node[ul] at (tpos) {\Name};
+                \node[ul,below=1.12 of c1.center] {\StudentNo};
+                \node[ul,below=0.82cm of c1.south] {\Faculty};
+                \node[ul,below=0.83cm of c1.south] {\Program};
+                \node[ul,below=0.83cm of c1.south] {\Major};
+                \node[ul,below=0.83cm of c1.south] {\Supervisor};
+                \node[ul,below=0.98cm of c1.south] {\DateofWriting};
+            \end{tikzpicture}
+        }{%
+            不存在,\titlefilepath,文件欠缺!
+        }
+    \fi
+}
 
 
 % 添加原创声明页
@@ -62,6 +196,7 @@ ul2/.style={inner sep = 0,anchor = base, font = {\fontsize{11pt}{\baselineskip}\
 \newcommand{\adddeclarepage}{
     \IfFileExists{\declarefilepath}{
         \clearpage
+        \MUSTDeclarationPagetrue
         \thispagestyle{plain}
         \thispagestyle{empty}
         \def\choo{0}
@@ -90,6 +225,8 @@ ul2/.style={inner sep = 0,anchor = base, font = {\fontsize{11pt}{\baselineskip}\
                 \node[ul2 ] at ($(O) + (1.5 cm,-24 cm)$){\DateofSignature};
                 \node[ul2,right = 2 cm of c1]{\DateofSignature};
             \end{tikzpicture}
+            \clearpage
+            \MUSTDeclarationPagefalse
         }{
           不存在,\titlefilepath,文件欠缺!
         }
