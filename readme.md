@@ -3,13 +3,14 @@
 
 [LICENSE](http://www.latex-project.org/lppl.txt)
 
-|                   項目獲取方法 | 編譯方式          | 鏈接                                                                                                           |
-| -----------------------------: | :---------------- | :------------------------------------------------------------------------------------------------------------- |
-| 加入 overleaf 在線獲取最新版本 | overleaf 在線編譯 | **Join** [**_Overleaf online project_**](https://www.overleaf.com/read/mjzpcxztzqzv#3b0b73)                    |
-|                    GitHub 克隆 | 本地編譯          | [**_GitHub_**](https://github.com/iihciyekub/MUST-Thesis/assets/30061185/f00ab6eb-6f1d-472f-8bc9-cdc4a1ca3e30) |
-
----
 **更新説明:**
+
+## 2026.07.24
+
+依据《研究生论文写作指引（2025年9月）》及计算机科学与工程学院范文格式，对模板进行以下修正：
+- [x] **英文扉页改为双语范文封面**（`c.1.commTitle.sty`）：英文写作模式下扉页改为学院范文样式，顶部为「題目：」（中文，标楷体 20pt）与「Title:」（英文，Times New Roman 20pt），均为常规字重；下方为中文栏目标签（姓名／學號／學院／課程／專業／指導老師／日期），栏目数据 16pt；沿用原 `GS004en` 覆盖坐标定位，数据块整体下移，不加水印；
+- [x] **中文小节标题斜体**（`b.3.setCaption.sty`）：中文 `\subsection` 由粗体改为斜体，符合规范第 4.2.5 条第三层小标题「16 标楷体、斜体」要求；
+- [x] **英文扉页日期格式**（`a.1.packBase.sty`）：`\datea` 由「July 2026」改为「2026 年 7 月」（`\THEYEAR 年\THEMONTH 月`），与中文栏目一致；
 
 ## 2026.06.07
 
@@ -60,7 +61,7 @@
 - 解決其它一系列bug問題;
 
 |                    方法 | 網址/文件名/安裝包                                                                                                 | 狀態                                                                                                      | 位置                                                                                                                                 |
-| ----------------------: | :----------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
+|------------------------:|:-------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------|
 | chrome 擴展程序(已發布) | [Overleaf texAide](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo) | 安裝成功後, 使用 chrome 瀏覽器在訪問 [overleaf](https://www.overleaf.com/read/mjzpcxztzqzv)上自動加載啟用 | [Chrome 瀏覽器應用商店下載](https://chrome.google.com/webstore/detail/overleaf-s2tbib2bbl/icekiliecbhnockmfkehoebbkmhmapmo?hl=zh-CN) |
 
 
@@ -69,18 +70,18 @@
 
 - 以下是學校提供的關於論文排版所有細節要求的附件(截止 2024-04-21 可訪問).
 
-|  NO. | 文件名                                                                                                                          | 本項目參考或使用 | 嚴格 |
-| ---: | :------------------------------------------------------------------------------------------------------------------------------ | ---------------- | ---- |
-|    1 | [扉頁格式](https://www.must.edu.mo/images/GSO/files/sgsdocument/GS004.pdf)                                                      | 使用             | ✓    |
-|    2 | [學位論文原創性聲明](https://www.must.edu.mo/images/GSO/files/S023學位論文原創性聲明BI.pdf)                                     | 使用             | ✓    |
-|    3 | [論文寫作指導](https://www.must.edu.mo/images/GSO/files/sgsdocument/GS002.pdf)                                                  | 參考             | ✓    |
-|    4 | [學位論文統一格式範例(Chinese)](https://www.must.edu.mo/images/GSO/files/sgsdocument/GS001.pdf)                                 | 參考             | ✓    |
-|      | [學位論文統一格式範例(English)](https://www.must.edu.mo/images/GSO/files/sgsdocument/Thesis-sample-Eng.pdf)                     | 參考             | ✓    |
-|    5 | [研究生論文格式參考資料(APA)](http://www.must.edu.mo/images/SGS/files/APA_7th_0710.pdf)                                         | 參考             | ✘    |
-|    6 | [校徽水印](https://lib.must.edu.mo/sites/default/files/must-logo.jpg)                                                           | 使用             | ✓    |
-|    7 | [國家文後參考文獻著錄規則](http://www.must.edu.mo/images/SGS/files/GBT7714_2015.pdf)                                            | 無               | ✘    |
-|    8 | [MLA參考文獻格式](https://www.must.edu.mo/images/SGS/files/MLA參考文獻格式.pdf)                                                 | 無               | ✘    |
-|    9 | [碩士與博士論文參考文獻格式補充説明_2022](https://www.must.edu.mo/images/MSB/files/碩士與博士論文參考文獻格式補充説明_2022.pdf) | 參考             | ✓    |
+| NO. | 文件名                                                                                                                          | 本項目參考或使用 | 嚴格 |
+|----:|:--------------------------------------------------------------------------------------------------------------------------------|------------------|------|
+|   1 | [扉頁格式](https://www.must.edu.mo/images/GSO/files/sgsdocument/GS004.pdf)                                                      | 使用             | ✓    |
+|   2 | [學位論文原創性聲明](https://www.must.edu.mo/images/GSO/files/S023學位論文原創性聲明BI.pdf)                                     | 使用             | ✓    |
+|   3 | [論文寫作指導](https://www.must.edu.mo/images/GSO/files/sgsdocument/GS002.pdf)                                                  | 參考             | ✓    |
+|   4 | [學位論文統一格式範例(Chinese)](https://www.must.edu.mo/images/GSO/files/sgsdocument/GS001.pdf)                                 | 參考             | ✓    |
+|     | [學位論文統一格式範例(English)](https://www.must.edu.mo/images/GSO/files/sgsdocument/Thesis-sample-Eng.pdf)                     | 參考             | ✓    |
+|   5 | [研究生論文格式參考資料(APA)](http://www.must.edu.mo/images/SGS/files/APA_7th_0710.pdf)                                         | 參考             | ✘    |
+|   6 | [校徽水印](https://lib.must.edu.mo/sites/default/files/must-logo.jpg)                                                           | 使用             | ✓    |
+|   7 | [國家文後參考文獻著錄規則](http://www.must.edu.mo/images/SGS/files/GBT7714_2015.pdf)                                            | 無               | ✘    |
+|   8 | [MLA參考文獻格式](https://www.must.edu.mo/images/SGS/files/MLA參考文獻格式.pdf)                                                 | 無               | ✘    |
+|   9 | [碩士與博士論文參考文獻格式補充説明_2022](https://www.must.edu.mo/images/MSB/files/碩士與博士論文參考文獻格式補充説明_2022.pdf) | 參考             | ✓    |
 
 
 歷史版本:

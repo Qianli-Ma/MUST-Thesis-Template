@@ -2,8 +2,8 @@
 % 用于声明原创的日期时间格式
 \newdateformat{dateb}{\THEYEAR/\THEMONTH/\THEDAY}
 \ifwriteqEn
-    % 用于英文扉页日期的时间格式
-    \newdateformat{datea}{\monthname~\THEYEAR}
+    % 用于英文扉页日期的时间格式 (YYYY 年 M 月)
+    \newdateformat{datea}{\THEYEAR 年\THEMONTH 月}
     % 用于英文致谢落款的时间格式
     \newdateformat{datek}{\THEYEAR/\THEMONTH/\THEDAY}
 \else

@@ -30,7 +30,7 @@
     coverInfo/.style={
         anchor=north west,
         inner sep=0,
-        font={\rmfamily\mdseries\fontsize{14.04pt}{16pt}\selectfont}
+        font={\rmfamily\mdseries\fontsize{16pt}{18pt}\selectfont}
     }
 }
 
@@ -38,7 +38,8 @@
 % Cover-page file paths
 % -------------------------------------------------
 \ifwriteqEn
-    \def\titlefilepath{\resourcePath GS004en.pdf}
+    % \def\titlefilepath{\resourcePath GS004en.pdf}
+    \def\titlefilepath{\resourcePath GS004.pdf}
 \else
     \def\titlefilepath{\resourcePath GS004.pdf}
 \fi
@@ -47,7 +48,7 @@
 % English cover-page helper settings
 % -------------------------------------------------
 \newlength{\coverValueWidth}
-\setlength{\coverValueWidth}{8cm}
+\setlength{\coverValueWidth}{8.8cm}
 
 \newcommand{\coverlabel}[2]{%
     \node[coverInfo] at ($(labelx)+(0,#1)$) {#2};%
@@ -82,72 +83,75 @@
 
     \ifwriteqEn
         % -------------------------------------------------
-        % English page: no PDF background
+        % English page: CS&E faculty 範文 cover
+        %   - 題目 (Chinese) then Title (English), both flush left, bold
+        %   - Chinese field labels: 姓名/學號/學院/課程/專業/指導老師/日期
+        %   - No watermark (graduation thesis needs none per 範文)
         % -------------------------------------------------
+        % Data positioned at the original GS004en overlay coordinates.
         \begin{tikzpicture}[remember picture,overlay]
 
-            % Title
-            \node[coverTitle]
-                at ($(current page.north west)+(2.86cm,-5.07cm)$)
-                {Title:};
+            % 題目 (Chinese title, KaiTi, 20pt, regular)
+            \node[anchor=north west, inner sep=0, text width=16.5cm,
+                  font={\fontsize{20pt}{28pt}\selectfont}]
+                at ($(current page.north west)+(2.86cm,-3.30cm)$)
+                {題目：\cnTitle};
 
-            \node[
-                coverTitle,
-                text width=13.5cm
-            ] at ($(current page.north west)+(4.80cm,-5.07cm)$)
-                {\enTitle};
+            % Title (English title, Times New Roman, 20pt, regular)
+            \node[anchor=north west, inner sep=0, text width=16.5cm,
+                  font={\rmfamily\fontsize{20pt}{28pt}\selectfont}]
+                at ($(current page.north west)+(2.86cm,-6.20cm)$)
+                {Title: \enTitle};
 
-            % Information block coordinates
-            \coordinate (labelx) at ($(current page.north west)+(5.56cm,0)$);
-            \coordinate (colonx) at ($(current page.north west)+(8.27cm,0)$);
-            \coordinate (linex)  at ($(current page.north west)+(8.93cm,0)$);
+            % Information-block coordinates (original GS004en form)
+            \coordinate (labelx) at ($(current page.north west)+(5.26cm,0)$);
+            \coordinate (colonx) at ($(current page.north west)+(7.97cm,0)$);
+            \coordinate (linex)  at ($(current page.north west)+(8.63cm,0)$);
 
-            % Name
-            \coverlabel{-12.24cm}{Name}
-            \covercolon{-12.24cm}
-            \covervalue{-12.24cm}{\Name}
-            \coverline{-12.89cm}
+            % 姓名
+            \coverlabel{-16.24cm}{\makebox[2.4cm][s]{姓\hfill 名}}
+            \covercolon{-16.24cm}
+            \covervalue{-16.24cm}{\Name}
+            \coverline{-16.89cm}
 
-            % Student No.
-            \coverlabel{-13.15cm}{Student No.}
-            \covercolon{-13.15cm}
-            \covervalue{-13.15cm}{\StudentNo}
-            \coverline{-13.93cm}
+            % 學號
+            \coverlabel{-17.35cm}{\makebox[2.4cm][s]{學\hfill 號}}
+            \covercolon{-17.35cm}
+            \covervalue{-17.35cm}{\StudentNo}
+            \coverline{-18.00cm}
 
-            % Faculty A, no underline
-            \coverlabel{-14.28cm}{Faculty}
-            \covercolon{-14.28cm}
-            \covervalue{-14.28cm}{\FacultyA}
+            % 學院
+            \coverlabel{-18.46cm}{\makebox[2.4cm][s]{學\hfill 院}}
+            \covercolon{-18.46cm}
+            \covervalue{-18.46cm}{\Faculty}
+            \coverline{-19.11cm}
 
-            % Faculty B, underlined
-            \covervalue{-14.84cm}{\FacultyB}
-            \coverline{-15.49cm}
+            % 課程
+            \coverlabel{-19.57cm}{\makebox[2.4cm][s]{課\hfill 程}}
+            \covercolon{-19.57cm}
+            \covervalue{-19.57cm}{\Program}
+            \coverline{-20.22cm}
 
-            % Program, shifted down
-            \coverlabel{-15.95cm}{Program}
-            \covercolon{-15.95cm}
-            \covervalue{-15.95cm}{\Program}
-            \coverline{-16.60cm}
+            % 專業
+            \coverlabel{-20.68cm}{\makebox[2.4cm][s]{專\hfill 業}}
+            \covercolon{-20.68cm}
+            \covervalue{-20.68cm}{\Major}
+            \coverline{-21.33cm}
 
-            % Major
-            \coverlabel{-17.06cm}{Major}
-            \covercolon{-17.06cm}
-            \covervalue{-17.06cm}{\Major}
-            \coverline{-17.71cm}
+            % 指導老師
+            \coverlabel{-21.79cm}{\makebox[2.4cm][s]{指導老師}}
+            \covercolon{-21.79cm}
+            \covervalue{-21.79cm}{\Supervisor}
+            \coverline{-22.44cm}
 
-            % Supervisor
-            \coverlabel{-18.17cm}{Supervisor}
-            \covercolon{-18.17cm}
-            \covervalue{-18.17cm}{\Supervisor}
-            \coverline{-18.82cm}
-
-            % Date
-            \coverlabel{-19.32cm}{Date}
-            \covercolon{-19.32cm}
-            \covervalue{-19.32cm}{\DateofWriting}
-            \coverline{-19.97cm}
+            % 日期
+            \coverlabel{-22.90cm}{\makebox[2.4cm][s]{日\hfill 期}}
+            \covercolon{-22.90cm}
+            \covervalue{-22.90cm}{\DateofWriting}
+            \coverline{-23.55cm}
 
         \end{tikzpicture}
+        \clearpage
 
     \else
         % -------------------------------------------------
