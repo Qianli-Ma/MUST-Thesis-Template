@@ -58,9 +58,13 @@
     \iftp\addtitlepage\fi
     % % 插入声明原创页
     \ifdp\adddeclarepage\fi
-    % 如果是英文版本时, 为摘要添加页页眉
+    % 前置部分 (摘要、目录、图/表目录) 页眉设置, 符合规范第 4.2.4 条:
+    %   左上角 = 论文标题 (\enShortTitle); 右上角 = 本页所在章节名 (\leftmark,
+    %   由 \setcnchapter/\setenchapter 的 \markboth 设定), 使中文摘要页显示
+    %   「摘 要」、英文摘要页显示「Abstract」。正文页由 \resetCEfancyhf 另行设定。
     \ifwriteqEn
         % \pagestyle{fancy}
-        \fancyhead[R]{\fontsize{10pt}{10pt}\selectfont Abstract}
+        \fancyhead[L]{\fontsize{10pt}{10pt}\selectfont\enShortTitle}
+        \fancyhead[R]{\fontsize{10pt}{10pt}\selectfont\leftmark}
     \fi
 }
