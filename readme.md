@@ -11,6 +11,13 @@
 - [x] **英文扉页改为双语范文封面**（`c.1.commTitle.sty`）：英文写作模式下扉页改为学院范文样式，顶部为「題目：」（中文，标楷体 20pt）与「Title:」（英文，Times New Roman 20pt），均为常规字重；下方为中文栏目标签（姓名／學號／學院／課程／專業／指導老師／日期），栏目数据 16pt；沿用原 `GS004en` 覆盖坐标定位，数据块整体下移，不加水印；
 - [x] **中文小节标题斜体**（`b.3.setCaption.sty`）：中文 `\subsection` 由粗体改为斜体，符合规范第 4.2.5 条第三层小标题「16 标楷体、斜体」要求；
 - [x] **英文扉页日期格式**（`a.1.packBase.sty`）：`\datea` 由「July 2026」改为「2026 年 7 月」（`\THEYEAR 年\THEMONTH 月`），与中文栏目一致；
+- [x] **表格 colortbl 兼容性**（`a.5.packTable.sty`）：加入 `\AtBeginDocument` 保护，为 colortbl 新版本（v1.0l，TeX Live 2026）中未定义的 `\CT@row@color`／`\CT@cell@color` 等内部命令补上空定义，修正无颜色表格出现 `Undefined control sequence` 的编译错误（对使用 `\rowcolor` 等真实着色无影响）；
+- [x] **参考文献样式升级为 APA 7 处理**（`apa5.bst`）：原 apalike 样式不支持 DOI 与网络资源。现作以下扩充：
+  - 注册 `doi`／`url`／`urldate` 字段；新增 `format.doi`，于 `fin.entry` 中为所有条目输出 `https://doi.org/<doi>`（`doi` 字段须为裸标识符，如 `10.1002/col.20070`）；
+  - DOI 优先于 URL：条目同时有 DOI 与 URL 时只输出 DOI（R-3.2）；据此 Class A（期刊／会议）条目上的出版商落地页链接（ieeexplore、sciencedirect 等）不再输出（R-3.3）；
+  - URL 与访问日期仅对 `@misc` 输出（`format.url`，格式「Retrieved 〈日期〉, from \url{…}」，无 `urldate` 时仅输出网址），Class A 条目不再带 URL 或访问日期（R-2.1／R-4.1）；`@misc` 另补网站名称（`journal`）输出，符合规范第 4.1.7 条；
+  - 已知限制（R-8.5）：a／b 年份后缀由「首位作者姓＋年份」自动生成，无法实现「作者列表不同则不加后缀、改以更多姓氏消歧」（R-8.2），此为 apalike 系样式固有限制，彻底修正需改用 biblatex-apa + biber。
+  - 注意：须重跑 BibTeX 生成新的 `.bbl`；内容侧仍需在 `.bib` 中为 Class A 条目补齐 DOI、将纯 arXiv 条目补上刊物或改为 `@misc`、并按 R-4.3／R-4.4 决定各网络条目是否保留访问日期。
 
 ## 2026.06.07
 

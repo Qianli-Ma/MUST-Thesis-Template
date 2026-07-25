@@ -42,6 +42,7 @@ ENTRY
     author
     booktitle
     chapter
+    doi
     edition
     editor
     howpublished
@@ -58,6 +59,8 @@ ENTRY
     series
     title
     type
+    url
+    urldate
     volume
     year
   }
@@ -212,8 +215,51 @@ FUNCTION {output.bibitem}
   before.all 'output.state :=
 }
 
+%   APA 7 identifier support (added). Policy:
+%     - DOI (if present) is printed as https://doi.org/<doi> for ALL entry
+%       types, via fin.entry (R-2.1/R-2.2, R-3.1).
+%     - The `doi` field must be the bare identifier, e.g. 10.1002/col.20070
+%       (Zotero export default). Do not include a resolver prefix.
+%     - A URL is printed only when NO DOI exists (DOI wins, R-3.2), and only
+%       for @misc entries (web / preprint) via the misc function. Class A
+%       types (@article/@inproceedings/@incollection/@book) never emit a URL
+%       or retrieval date (R-2.1, R-4.1).
+%     - Retrieval date is emitted only when the @misc entry carries `urldate`;
+%       which web entries keep it (R-4.3 vs R-4.4) is a per-entry .bib decision.
+%   NOTE (R-8.5): a/b year suffixes are generated from first-author surname +
+%   year (see the label passes below) and cannot express APA's "different
+%   author lists -> no suffix, expand names" rule (R-8.2). That is a limitation
+%   of this apalike-derived style; a full fix requires biblatex-apa + biber.
+%   Requires the \url macro (url/hyperref package, already loaded).
+FUNCTION {format.doi}
+{ doi empty$
+    { "" }
+    { "\url{https://doi.org/" doi * "}" * }
+  if$
+}
+
+FUNCTION {format.url}
+{ doi empty$
+    { url empty$
+        { "" }
+        { urldate empty$
+            { "\url{" url * "}" * }
+            { "Retrieved " urldate * ", from \url{" * url * "}" * }
+          if$
+        }
+      if$
+    }
+    { "" }				% DOI present: suppress URL (R-3.2)
+  if$
+}
+
 FUNCTION {fin.entry}
-{ add.period$
+{ output.state before.all =	% inline new.block (defined later in file)
+    'skip$
+    { after.block 'output.state := }
+  if$
+  format.doi output		% DOI (https://doi.org/...) for all entry types
+  add.period$
   write$
   newline$
 }
@@ -848,9 +894,13 @@ FUNCTION {misc}
   new.block
   format.title output
   new.block
+  journal output					% site name for web sources
+  new.block
   howpublished output
   new.block
   note output
+  new.block
+  format.url output					% URL (+ retrieval date) for @misc only
   fin.entry
 }
 
