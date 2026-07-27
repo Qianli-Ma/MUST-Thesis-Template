@@ -6,11 +6,16 @@
         \renewcommand{\contentsname}{Contents}
         \markboth{Contents}{Contents}
         \fancyhead[R]{\fontsize{10pt}{10pt}\selectfont Contents}
+        % 目录页自身在目录中列出「Contents」条目, 并以 \phantomsection 建立本页锚点,
+        % 使其跳页链接指向目录页 (范文 Contents 列有 Contents 一项)。
+        \phantomsection
+        \addcontentsline{toc}{chapter}{\hspace{\hdis em}\textbf{Contents}}
         \tableofcontents
 
         % 如果設置 - 添加英文圖目錄
         \iffigt
             \clearpage
+            \phantomsection
             \addcontentsline{toc}{chapter}{\hspace{\hdis em}\textbf{List of Figures}}
             \fancyhead[R]{\fontsize{10pt}{10pt}\selectfont List of Figures}
             \listoffigures
@@ -19,6 +24,7 @@
         % 如果設置 - 添加英文表目錄
         \iftabt
             \clearpage
+            \phantomsection
             \addcontentsline{toc}{chapter}{\hspace{\hdis em}\textbf{List of Tables}}
             \fancyhead[R]{\fontsize{10pt}{10pt}\selectfont List of Tables}
             \listoftables

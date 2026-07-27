@@ -19,6 +19,11 @@
   - 已知限制（R-8.5）：a／b 年份后缀由「首位作者姓＋年份」自动生成，无法实现「作者列表不同则不加后缀、改以更多姓氏消歧」（R-8.2），此为 apalike 系样式固有限制，彻底修正需改用 biblatex-apa + biber。
   - 注意：须重跑 BibTeX 生成新的 `.bbl`；内容侧仍需在 `.bib` 中为 Class A 条目补齐 DOI、将纯 arXiv 条目补上刊物或改为 `@misc`、并按 R-4.3／R-4.4 决定各网络条目是否保留访问日期。
 - [x] **前置部分页眉修正**（`c.4.commBody.sty`）：英文写作模式下 `\AtBeginDocument` 原将右上角页眉硬编码为「Abstract」，导致中文摘要页 (p. I) 也显示「Abstract」；且清空页眉后未恢复左上角标题，致摘要／目录／图目录／表目录等前置页缺少论文标题。现改为右上角跟随 `\leftmark`（中文摘要页显示「摘 要」、英文摘要页显示「Abstract」），并补回左上角 `\enShortTitle`，符合规范第 4.2.4 条「左上角为论文标题、右上角为本页所在章节名称」。
+- [x] **目录 (Contents) 自身条目与跳页链接修正**（`c.3.commToc.sty`、`c.2.commAbstract.sty`）：
+  - 目录中新增「Contents」条目（`\addcontentsline`）并以 `\phantomsection` 建立目录页锚点，与范文一致；
+  - 为所有手工添加的前置条目补上 `\phantomsection`：摘要／Abstract（`\setcnchapter`／`\setenchapter`）、List of Figures、List of Tables，修正原先因缺少锚点而使跳页链接指向错误页面（多为上一页）的问题；`\setcnchapter`／`\setenchapter` 为共用宏，故 References／Appendix／Acknowledgments／Resume 的目录链接一并修正。带编号的章节 (`\chapter`) 本身锚点正确，无需改动。
+  - `\setcnchapter`／`\setenchapter` 中锚点须置于标题 (`\chapter*`) 之前（采用 `\clearpage`→`\phantomsection`→`\chapter*` 顺序），否则锚点落在标题之后, 链接会跳到标题的下一行而非标题本身。
+  - 注意：须连续编译两次，`.toc` 与超链接锚点方能正确生成。
 
 ## 2026.06.07
 

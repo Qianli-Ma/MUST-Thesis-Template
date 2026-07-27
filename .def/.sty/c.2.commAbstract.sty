@@ -8,12 +8,16 @@
 \abstractstartedfalse
 
 \newcommand{\setcnchapter}[1]{%
+    \clearpage
+    \phantomsection	% 先在本页顶部 (标题之前) 建立锚点, 使目录链接指向章节标题本身
     \chapter*{#1}%
     \markboth{#1}{}%
     \addcontentsline{toc}{chapter}{\hspace{\hdis em}\textbf{#1}}%
 }
 
 \newcommand{\setenchapter}[1]{%
+    \clearpage
+    \phantomsection	% 先在本页顶部 (标题之前) 建立锚点, 使目录链接指向章节标题本身
     \chapter*{\fontsize{18pt}{\baselineskip}\selectfont #1}%
     \markboth{#1}{#1}%
     \addcontentsline{toc}{chapter}{\hspace{\hdis em}\textbf{#1}}%
